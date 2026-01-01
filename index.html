@@ -204,6 +204,44 @@
 .CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
 .CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
 .CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
 </style>
 <style>
         :root {
@@ -1123,6 +1161,204 @@ mjx-c.mjx-c1D438.TEX-I::before {
   padding: 0.68em 0.764em 0 0;
   content: "E";
 }
+</style><style>.--savior-overlay-transform-reset {
+  transform: none !important;
+}
+.--savior-overlay-z-index-top {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-position-relative {
+  position: relative;
+}
+.--savior-overlay-position-static {
+  position: static !important;
+}
+.--savior-overlay-overflow-hidden {
+  overflow: hidden !important;
+}
+.--savior-overlay-overflow-x-visible {
+  overflow-x: visible !important;
+}
+.--savior-overlay-overflow-y-visible {
+  overflow-y: visible !important;
+}
+.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.--savior-overlay-display-none {
+  display: none !important;
+}
+.--savior-overlay-clearfix {
+  clear: both;
+}
+.--savior-overlay-reset-filter {
+  filter: none !important;
+  backdrop-filter: none !important;
+}
+.--savior-tooltip-host {
+  z-index: 9999;
+  position: absolute;
+  top: 0;
+}
+/*Override css styles for Twitch.tv*/
+main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+.modal__backdrop.--savior-overlay-z-index-reset {
+  position: static !important;
+}
+main.--savior-overlay-z-index-top {
+  z-index: auto !important;
+}
+main.--savior-overlay-z-index-top .channel-root__player-container + div,
+main.--savior-overlay-z-index-top .video-player-hosting-ui__container + div {
+  opacity: 0.1;
+}
+/*Dirty hack for facebook big video page e.g: https://www.facebook.com/abc/videos/...*/
+.--savior-backdrop {
+  position: fixed !important;
+  z-index: 2147483642 !important;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw !important;
+  background-color: rgba(0,0,0,0.9);
+}
+.--savior-overlay-twitter-video-player {
+  position: fixed;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+}
+.--savior-overlay-z-index-reset [class*="DivSideNavContainer"],
+.--savior-overlay-z-index-reset [class*="DivHeaderContainer"],
+.--savior-overlay-z-index-reset [class*="DivBottomContainer"],
+.--savior-overlay-z-index-reset [class*="DivCategoryListWrapper"],
+.--savior-overlay-z-index-reset [data-testid="sidebarColumn"],
+.--savior-overlay-z-index-reset header[role="banner"],
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"]:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:first-child,
+.--savior-overlay-z-index-reset [aria-label="Home timeline"]>div:nth-child(3) {
+  z-index: -1 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="cellInnerDiv"] .--savior-backdrop+div {
+  z-index: 2147483643 !important;
+}
+.--savior-overlay-z-index-reset [data-testid="primaryColumn"]>[aria-label="Home timeline"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-z-index-reset#mtLayer,
+.--savior-overlay-z-index-reset.media-layer {
+  z-index: 3000 !important;
+}
+.--savior-overlay-position-relative [class*="SecBar_secBar_"],
+.--savior-overlay-position-relative .woo-box-flex [class*="Frame_top_"] {
+  z-index: 0 !important;
+}
+.--savior-overlay-position-relative .vue-recycle-scroller__item-view:not(.--savior-overlay-z-index-reset),
+.--savior-overlay-position-relative .woo-panel-main[class*="BackTop_main_"],
+.--savior-overlay-position-relative [class*="Main_side_"] {
+  z-index: -1 !important;
+}
+/* Fix conflict css with zingmp3 */
+.zm-video-modal.--savior-overlay-z-index-reset {
+  position: absolute;
+}
+/* Dirty hack for xvideos99 */
+#page #main.--savior-overlay-z-index-reset {
+  z-index: auto !important;
+}
+/* Overlay for ok.ru */
+#vp_w.--savior-overlay-z-index-reset.media-layer.media-layer__video {
+  overflow-y: hidden;
+  z-index: 2147483643 !important;
+}
+/* Fix missing controller for tv.naver.com */
+.--savior-overlay-z-index-top.rmc_controller,
+.--savior-overlay-z-index-top.rmc_setting_intro,
+.--savior-overlay-z-index-top.rmc_highlight,
+.--savior-overlay-z-index-top.rmc_control_settings {
+  z-index: 2147483644 !important;
+}
+/* Dirty hack for douyi.com */
+.swiper-wrapper.--savior-overlay-z-index-reset .swiper-slide:not(.swiper-slide-active),
+.swiper-wrapper.--savior-overlay-transform-reset .swiper-slide:not(.swiper-slide-active) {
+  display: none;
+}
+.videoWrap + div > div {
+  pointer-events: unset;
+}
+/* Dirty hack for fpt.ai */
+.mfp-wrap.--savior-overlay-z-index-top {
+  position: relative;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-close {
+  display: none;
+}
+.mfp-wrap.--savior-overlay-z-index-top .mfp-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset + nav {
+  z-index: -1 !important;
+}
+section.--savior-overlay-z-index-reset>main[role="main"].--savior-overlay-z-index-reset section.--savior-overlay-z-index-reset div.--savior-overlay-z-index-reset ~ div {
+  position: relative;
+}
+.watching-movie #video-player.--savior-overlay-z-index-top {
+  z-index: 2147483644 !important;
+}
+div[class^="tiktok"].--savior-overlay-z-index-reset {
+  z-index: 2147483644 !important;
+}
+.--savior-lightoff-fix section:not(:has([class*="--savior-overlay-"])),
+.--savior-lightoff-fix section.section_video ~ section {
+  z-index: -1;
+  position: relative;
+}
+.--savior-lightoff-fix header,
+.--savior-lightoff-fix footer,
+.--savior-lightoff-fix .top-header,
+.--savior-lightoff-fix .swiper-container,
+.--savior-lightoff-fix #to_top,
+.--savior-lightoff-fix #button-adblock {
+  z-index: -1 !important;
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 </style></head>
 <body>
 <div class="container">
@@ -1131,7 +1367,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
 <div class="name-input-group">
 <div class="input-wrapper box-subject">
 <span class="name-label">Môn thi:</span>
-<select class="subject-select" id="user-subject-select" onchange="Manager.rememberSubject(); QuizApp.updateSubjectInfo()"><option value="ALL">Tất cả môn</option><option value="Nguyên Lý Hệ Điều Hành">Nguyên Lý Hệ Điều Hành</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
+<select class="subject-select" id="user-subject-select" onchange="Manager.rememberSubject(); QuizApp.updateSubjectInfo()"><option value="ALL">Tất cả môn</option><option value="Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
 </div>
 <div class="input-wrapper box-name">
 <span class="name-label">Họ và Tên:</span>
@@ -1139,7 +1375,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
 </div>
 </div>
 <div class="config-section">
-<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 242</p>
+<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 140</p>
 <h3>Cấu hình bài thi</h3>
 <div class="time-config-row">
 <div style="display:flex; align-items:center; gap:5px;">
@@ -1204,14 +1440,14 @@ mjx-c.mjx-c1D438.TEX-I::before {
 </div>
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; margin-top: 20px;">
 <div>
-<select class="form-control" id="admin-filter-subject" onchange="Manager.renderList()" style="width: auto; display: inline-block; padding: 5px;"><option value="ALL">-- Tất cả môn --</option><option value="Nguyên Lý Hệ Điều Hành">Nguyên Lý Hệ Điều Hành</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
+<select class="form-control" id="admin-filter-subject" onchange="Manager.renderList()" style="width: auto; display: inline-block; padding: 5px;"><option value="ALL">-- Tất cả môn --</option><option value="Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
 <span style="font-size:0.9em;">Tổng: <b id="total-questions-count">242</b></span>
 </div>
 <button class="btn btn-success btn-sm" onclick="Manager.openModal()">+ Thêm</button>
 </div>
 <div id="question-list-container" style="max-height: 400px; overflow-y: auto;"><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#1:</strong> Hệ điều hành yêu cầu hệ thống phải được khai thác sao cho các thiết bị hoạt động chậm không làm ảnh hưởng tới các thiết bị hoạt động nhanh
                     </div>
                     <div class="q-actions">
@@ -1219,7 +1455,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(0)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#2:</strong> Trên quan điểm người sử dụng, hệ điều hành là hệ thống chương trình cho phép mở rộng khả năng của một máy tính vật lý
                     </div>
                     <div class="q-actions">
@@ -1227,7 +1463,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(1)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#3:</strong> Mỗi phần tử trong bảng quản lý file (FAT) chứa thông tin về
                     </div>
                     <div class="q-actions">
@@ -1235,7 +1471,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(2)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#4:</strong> Trong FAT16, vùng hệ thống (system area) bao gồm:
                     </div>
                     <div class="q-actions">
@@ -1243,7 +1479,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(3)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#5:</strong> Chương trình được xây dựng theo cấu trúc nạp động có thể thực hiện trong vùng nhớ có kích thước nhỏ hơn kích thước chương trình
                     </div>
                     <div class="q-actions">
@@ -1251,7 +1487,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(4)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#6:</strong> Nhiệm vụ nào dưới đây không phải là nhiệm vụ của thành phần quản lí bộ nhớ:
                     </div>
                     <div class="q-actions">
@@ -1259,7 +1495,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(5)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#7:</strong> Một đĩa cứng có cấu trúc vật lý gồm 1000 sector cho một Cylinder. Giả thiết hệ thống truy xuất đĩa vừa truy xuất sector có số hiệu 20456, trong hàng đợi tồn tại các yêu cầu truy xuất đĩa như có thứ tự sau:
 *10531, 22457, 20198, 40167, 2395, 2856, 6624, 6135, 38245, 6845*
 *Theo chiến lược FCFS thì tổng quãng đường đầu đọc dịch chuyển là:*
@@ -1269,7 +1505,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(6)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#8:</strong> Trong FAT32, vùng hệ thống bao gồm:
                     </div>
                     <div class="q-actions">
@@ -1277,7 +1513,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(7)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#9:</strong> Phát biểu sau là tính chất nào của HĐH: "Hạn chế ảnh hưởng sai sốt vô tình hay cố ý"
                     </div>
                     <div class="q-actions">
@@ -1285,7 +1521,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(8)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#10:</strong> Phòng đệm vòng tròn thường ứng dụng trong:
                     </div>
                     <div class="q-actions">
@@ -1293,7 +1529,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(9)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#11:</strong> Kích thước để quản lí một phân vùng chính trong Master Boot
                     </div>
                     <div class="q-actions">
@@ -1301,7 +1537,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(10)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#12:</strong> Trên đồ thị cung cấp tài nguyên, cung yêu cầu xuất phát từ đỉnh của kiểu tài nguyên
                     </div>
                     <div class="q-actions">
@@ -1309,7 +1545,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(11)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#13:</strong> Giả sử bộ nhớ vật lý có 4 khung trang Xét thứ tự các trang được truy xuất: 1, 2, 3, 4, 2, 6, 5, 7, 2, 1, 2, 3, 7, 6, 3 Hỏi số lỗi trang là bao nhiêu theo thuật toán LRU.
                     </div>
                     <div class="q-actions">
@@ -1317,7 +1553,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(12)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#14:</strong> Cấu trúc một phần tử ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000 Số hiệu cluster bắt đầu là:
                     </div>
                     <div class="q-actions">
@@ -1325,7 +1561,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(13)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#15:</strong> Một đĩa cứng có cấu trúc vật lý gồm 1000 sector cho một Cylinder. Giả thiết hệ thống truy xuất đĩa vừa truy xuất sector có số hiệu 20456, trong hàng đợi tồn tại các yêu cầu truy xuất đĩa như có thứ tự sau: 10531, 22457, 20198, 40167, 2395, 2856, 6624, 6135, 38245, 6845. Theo chiến lược SSTF thì tổng quãng đường đầu đọc dịch chuyển là:
                     </div>
                     <div class="q-actions">
@@ -1333,7 +1569,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(14)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#16:</strong> Hệ thống có một vi xử lý thì chỉ có duy nhất một tiến trình nằm trong bộ nhớ
                     </div>
                     <div class="q-actions">
@@ -1341,7 +1577,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(15)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#17:</strong> Trong quản lý thiết bị ngoại vi, các máy tính thế hệ thứ ba trở đi làm việc theo nguyên tắc phân cấp nào:
                     </div>
                     <div class="q-actions">
@@ -1349,7 +1585,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(16)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#18:</strong> Đâu là đặc điểm của thuật giải SJF (Shortest Job First):
                     </div>
                     <div class="q-actions">
@@ -1357,7 +1593,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(17)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#19:</strong> Cấu trúc một phần từ ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000. Ngày (d/m/y) tạo file là:
                     </div>
                     <div class="q-actions">
@@ -1365,7 +1601,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(18)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#20:</strong> Trong chế độ phân trang, để đọc/ghi dữ liệu cần mấy lần truy nhập vật lý:
                     </div>
                     <div class="q-actions">
@@ -1373,7 +1609,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(19)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#21:</strong> Trong chế độ quản lý bộ nhớ theo module/segment, để đọc/ghi dữ liệu cần mấy lần truy nhập bộ nhớ vật lý:
                     </div>
                     <div class="q-actions">
@@ -1381,7 +1617,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(20)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#22:</strong> Theo lý thuyết, Tiến trình tồn tại ở mấy trạng thái:
                     </div>
                     <div class="q-actions">
@@ -1389,7 +1625,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(21)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#23:</strong> Trong chế độ quản lí bộ nhớ phân đoạn kết hợp phân trang, SCB gồm các trường nào (theo đúng thứ tự):
                     </div>
                     <div class="q-actions">
@@ -1397,7 +1633,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(22)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#24:</strong> Tiến trình chuyển từ trạng thái Running sang trạng thái Ready khi hết thời gian sử dụng Processor vật lý
                     </div>
                     <div class="q-actions">
@@ -1405,7 +1641,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(23)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#25:</strong> Phát biểu nào sau đây không phải là vai trò của phòng đệm:
                     </div>
                     <div class="q-actions">
@@ -1413,7 +1649,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(24)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#26:</strong> Đặc điểm nào không phải là của cấu trúc chương trình overlay:
                     </div>
                     <div class="q-actions">
@@ -1421,7 +1657,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(25)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#27:</strong> Sector có địa chỉ tương đối là 66 thì có địa chỉ vật lí CHS (giả thiết đĩa 63 sector/track) bằng:
                     </div>
                     <div class="q-actions">
@@ -1429,7 +1665,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(26)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#28:</strong> Xét không gian địa chỉ logic 32 trang (pages), kích thước trang là 1KB, ánh xạ sang bộ nhớ vật lý 16 khung trang Hỏi có bao nhiêu bit trong địa chỉ logic:
                     </div>
                     <div class="q-actions">
@@ -1437,7 +1673,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(27)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#29:</strong> Xét không gian địa chỉ logic 32 trang (pages), kích thước trang là 1KB, ánh xạ sang bộ nhớ vật lí 16 khung trang Hỏi có bao nhiêu bit trong địa chỉ vật lý:
                     </div>
                     <div class="q-actions">
@@ -1445,7 +1681,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(28)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#30:</strong> Cấu trúc một phần tử của bảng phân vùng như sau, tính số sector của phân vùng này: 800001F9 0BFEBF30 B9093D00 387B4C00
                     </div>
                     <div class="q-actions">
@@ -1453,7 +1689,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(29)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#31:</strong> Trong kĩ thuật quản lí bộ nhớ phân vùng động, số lượng chương trình có thể nạp vào bộ nhớ lớn nhất là bao nhiêu:
                     </div>
                     <div class="q-actions">
@@ -1461,7 +1697,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(30)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#32:</strong> Các luồng trong cùng một tiến trình chia sẻ với nhau đoạn mã lệnh của tiến trình
                     </div>
                     <div class="q-actions">
@@ -1469,7 +1705,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(31)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#33:</strong> Trong cấu trúc Overlay, chương trình được tổ chức các lớp (Lớp 0: 80K; L1: 40,60,100K; L2: 50,70,80K; L3: 60,70K; L4: 90,10,20,40K) Kích thước bộ nhớ yêu cầu là:
                     </div>
                     <div class="q-actions">
@@ -1477,7 +1713,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(32)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#34:</strong> Sử dụng thao tác mở file cho phép giảm bớt số lần duyệt thư mục file không cần thiết
                     </div>
                     <div class="q-actions">
@@ -1485,7 +1721,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(33)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#35:</strong> Cấu trúc một phần tử ROOT cho như sau: 52454144  4D425220  43202020  003C865B  A53EA53E  0000CF79  A53E402E  BD0A0000. Ngày (d/m/y) cập nhật cuối là:
                     </div>
                     <div class="q-actions">
@@ -1493,7 +1729,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(34)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#36:</strong> Phát biểu sau là tính chất nào của hệ điều hành: "Mọi công việc trong hệ thống đều phải có kiểm tra":
                     </div>
                     <div class="q-actions">
@@ -1501,7 +1737,7 @@ mjx-c.mjx-c1D438.TEX-I::before {
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(35)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#37:</strong> Cho bảng thông tin của các tiến trình:
 Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                     </div>
@@ -1510,7 +1746,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(36)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#38:</strong> Trong phần tử FAT32, trường lưu thông tin kích thước của FAT có offset:
                     </div>
                     <div class="q-actions">
@@ -1518,7 +1754,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(37)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#39:</strong> Cấu trúc một phần tử ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000. Kích thước file là:
                     </div>
                     <div class="q-actions">
@@ -1526,7 +1762,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(38)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#40:</strong> Đặc điểm nào không phải là của cấu trúc chương trình tuyến tính:
                     </div>
                     <div class="q-actions">
@@ -1534,7 +1770,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(39)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#41:</strong> Tồn tại hiện tượng phân đoạn ngoài khi sử dụng chiến lược phân phối liên kết (linked-list allocation), vùng lưu trữ cho file
                     </div>
                     <div class="q-actions">
@@ -1542,7 +1778,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(40)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#42:</strong> Cấu trúc một phần tử ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000. Thời điểm (h/m/s) cập nhật cuối là:
                     </div>
                     <div class="q-actions">
@@ -1550,7 +1786,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(41)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#43:</strong> Tại sao chiến lược phân đoạn có thể bảo vệ mã chương trình tốt hơn?
                     </div>
                     <div class="q-actions">
@@ -1558,7 +1794,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(42)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#44:</strong> Khi nào một tiến trình bị lỗi truy nhập trong phân đoạn?
                     </div>
                     <div class="q-actions">
@@ -1566,7 +1802,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(43)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#45:</strong> Vì sao phân đoạn gây phân mảnh ngoài?
                     </div>
                     <div class="q-actions">
@@ -1574,7 +1810,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(44)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#46:</strong> Đoạn 1: M = 1, Base = 6300, Length = 400 Hỏi địa chỉ vật lý của &lt;1, 350&gt;?
                     </div>
                     <div class="q-actions">
@@ -1582,7 +1818,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(45)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#47:</strong> Trường hợp nào đoạn có thể dùng chung giữa các tiến trình?
                     </div>
                     <div class="q-actions">
@@ -1590,7 +1826,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(46)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#48:</strong> Một chương trình có 5 đoạn Khi nạp, chỉ 3 đoạn được đánh dấu M=1 2 đoạn còn lại chưa nạp Nếu truy cập đoạn chưa nạp thì?
                     </div>
                     <div class="q-actions">
@@ -1598,7 +1834,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(47)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#49:</strong> Cho địa chỉ &lt;0, 200&gt;, đoạn 0 có base = 1400 Địa chỉ vật lý là?
                     </div>
                     <div class="q-actions">
@@ -1606,7 +1842,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(48)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#50:</strong> Lợi ích nào KHÔNG phải của phân đoạn?
                     </div>
                     <div class="q-actions">
@@ -1614,7 +1850,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(49)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#51:</strong> Một chương trình có đoạn 2 có độ dài 800 bytes Nếu tiến trình yêu cầu truy cập địa chỉ logic &lt;2, 900&gt;, kết quả là gì?
                     </div>
                     <div class="q-actions">
@@ -1622,7 +1858,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(50)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#52:</strong> SCB có mục: Đoạn 3 → Base = 3200, Length = 1100 Hỏi địa chỉ vật lý của &lt;3, 450&gt;?
                     </div>
                     <div class="q-actions">
@@ -1630,7 +1866,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(51)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#53:</strong> Bộ nhớ logic 16 KB, kích thước trang 1 KB → có bao nhiêu trang logic?
                     </div>
                     <div class="q-actions">
@@ -1638,7 +1874,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(52)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#54:</strong> Một địa chỉ logic 2050 (decimal), kích thước trang 1024 Trang = ? Offset = ?
                     </div>
                     <div class="q-actions">
@@ -1646,7 +1882,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(53)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#55:</strong> PCB[3] = 5 nghĩa là gì?
                     </div>
                     <div class="q-actions">
@@ -1654,7 +1890,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(54)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#56:</strong> Vì sao phân trang không có phân mảnh ngoài?
                     </div>
                     <div class="q-actions">
@@ -1662,7 +1898,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(55)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#57:</strong> Lỗi trang xảy ra khi?
                     </div>
                     <div class="q-actions">
@@ -1670,7 +1906,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(56)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#58:</strong> Một địa chỉ logic &lt;p=2, d=50&gt;, PCB[2] = 6, kích thước trang 100 Địa chỉ vật lý?
                     </div>
                     <div class="q-actions">
@@ -1678,7 +1914,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(57)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#59:</strong> Nhược điểm chính của phân trang?
                     </div>
                     <div class="q-actions">
@@ -1686,7 +1922,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(58)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#60:</strong> TLB giúp cải thiện điều gì?
                     </div>
                     <div class="q-actions">
@@ -1694,7 +1930,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(59)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#61:</strong> Chiến lược thay thế trang nào tối ưu nhất về mặt lý thuyết?
                     </div>
                     <div class="q-actions">
@@ -1702,7 +1938,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(60)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#62:</strong> Cho chuỗi truy cập: 1 2 3 4 1 2 5 1 2 3 4 5; số khung = 3 Số lỗi trang theo FIFO là?
                     </div>
                     <div class="q-actions">
@@ -1710,7 +1946,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(61)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#63:</strong> Sử dụng FAT, thời gian truy cập ngẫu nhiên sẽ
                     </div>
                     <div class="q-actions">
@@ -1718,7 +1954,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(62)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#64:</strong> Trong phân phối đánh chỉ mục
                     </div>
                     <div class="q-actions">
@@ -1726,7 +1962,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(63)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#65:</strong> Trong thư mục gốc, nếu một phần tử có thuộc tính 0F và byte đầu tiên có giá trị 0x43, điều đó có nghĩa là
                     </div>
                     <div class="q-actions">
@@ -1734,7 +1970,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(64)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#66:</strong> Điều gì xảy ra khi một tiến trình đóng một tệp?
                     </div>
                     <div class="q-actions">
@@ -1742,7 +1978,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(65)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#67:</strong> Một phần tử trong thư mục gốc có giá trị sau Các thuộc tính của tập tin là gì?
                     </div>
                     <div class="q-actions">
@@ -1750,7 +1986,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(66)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#68:</strong> Phương pháp phân phối bộ nhớ nào gặp phải hiện tượng phân mảnh bộ nhớ?
                     </div>
                     <div class="q-actions">
@@ -1758,7 +1994,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(67)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#69:</strong> Hãy xem xét một đĩa có các khối 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 17, 18, 25, 26 và 27 còn trống và các khối còn lại được phân bổ. Do đó, bitmap không gian trống sẽ là
                     </div>
                     <div class="q-actions">
@@ -1766,7 +2002,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(68)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#70:</strong> Điều gì xảy ra trong thư mục một mức?
                     </div>
                     <div class="q-actions">
@@ -1774,7 +2010,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(69)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#71:</strong> Trong hệ thống FAT, các liên cung (cluster) trong một phân vùng được đánh số bắt đầu từ
                     </div>
                     <div class="q-actions">
@@ -1782,7 +2018,7 @@ Hỏi thời gian chờ đợi trung bình theo giải thuật SJF là:
                         <button class="btn btn-danger btn-sm" onclick="Manager.deleteQuestion(70)">🗑</button>
                     </div></div><div class="q-list-item">
                     <div class="q-list-content">
-                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành</span>
+                        <span class="q-subject-badge">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</span>
                         <strong>#72:</strong> Phần tử gốc có giá trị sau Tên tập tin là gì?
                     </div>
                     <div class="q-actions">
@@ -3158,7 +3394,37 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 <input class="form-control" id="new-subject-input" placeholder="Tên môn mới..." type="text">
 <button class="btn btn-success" onclick="Manager.addSubject()">Thêm</button>
 </div>
-<ul id="subject-list-ui" style="list-style: none; padding: 0;"></ul>
+<ul id="subject-list-ui" style="list-style: none; padding: 0;"><li style="padding: 8px; border-bottom: 1px solid rgb(238, 238, 238); display: flex; justify-content: space-between;">
+                    <span><b>Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</b> <small>(72 câu)</small></span>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(0)">✎ Sửa</button>
+                        <span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>
+                    </div>
+                </li><li style="padding: 8px; border-bottom: 1px solid rgb(238, 238, 238); display: flex; justify-content: space-between;">
+                    <span><b>Cấu trúc dữ liệu &amp; thuật toán</b> <small>(140 câu)</small></span>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(1)">✎ Sửa</button>
+                        <span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>
+                    </div>
+                </li><li style="padding: 8px; border-bottom: 1px solid rgb(238, 238, 238); display: flex; justify-content: space-between;">
+                    <span><b>(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</b> <small>(10 câu)</small></span>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(2)">✎ Sửa</button>
+                        <span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>
+                    </div>
+                </li><li style="padding: 8px; border-bottom: 1px solid rgb(238, 238, 238); display: flex; justify-content: space-between;">
+                    <span><b>(HDH) Chương 3: quản lý bộ nhớ Phân Trang</b> <small>(10 câu)</small></span>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(3)">✎ Sửa</button>
+                        <span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>
+                    </div>
+                </li><li style="padding: 8px; border-bottom: 1px solid rgb(238, 238, 238); display: flex; justify-content: space-between;">
+                    <span><b>(HDH) Chương 4</b> <small>(10 câu)</small></span>
+                    <div>
+                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(4)">✎ Sửa</button>
+                        <span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>
+                    </div>
+                </li></ul>
 <p style="font-size: 0.8em; color: #666;">* Không thể xóa môn đang có câu hỏi.</p>
 </div>
 <div id="tab-settings" style="display: none;">
@@ -3193,99 +3459,106 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 <th width="15%">Ngày</th>
 </tr>
 </thead>
-<tbody id="rank-body"><tr>
+<tbody id="rank-body"><tr style="background-color: rgb(232, 248, 245);">
             <td>1</td>
+            <td style="font-weight:600">Tran Anh</td>
+            <td>(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</td>
+            <td><span style="color:var(--success-color)">6</span>/10</td>
+            <td style="font-weight:bold; color:var(--primary-color)">6</td>
+            <td style="font-size:0.85em; color:#777;">1/1/2026 18:41</td>
+        </tr><tr>
+            <td>2</td>
             <td style="font-weight:600">T</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">1/1/2026 15:29</td>
         </tr><tr>
-            <td>2</td>
+            <td>3</td>
             <td style="font-weight:600">Thu Nguyen</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">1</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:#777;">1/1/2026 0:13</td>
         </tr><tr>
-            <td>3</td>
+            <td>4</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">1</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:#777;">1/1/2026 0:3</td>
         </tr><tr>
-            <td>4</td>
+            <td>5</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 23:46</td>
         </tr><tr>
-            <td>5</td>
+            <td>6</td>
             <td style="font-weight:600">Test</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">1</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 23:34</td>
         </tr><tr>
-            <td>6</td>
+            <td>7</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 23:14</td>
         </tr><tr>
-            <td>7</td>
+            <td>8</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
-            <td style="font-weight:bold; color:var(--primary-color)">0</td>
-            <td style="font-size:0.85em; color:#777;">31/12/2025 23:13</td>
-        </tr><tr>
-            <td>8</td>
-            <td style="font-weight:600">Tran Anh</td>
-            <td>Tất cả môn</td>
-            <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 23:13</td>
         </tr><tr>
             <td>9</td>
             <td style="font-weight:600">Tran Anh</td>
+            <td>Tất cả môn</td>
+            <td><span style="color:var(--success-color)">0</span>/212</td>
+            <td style="font-weight:bold; color:var(--primary-color)">0</td>
+            <td style="font-size:0.85em; color:#777;">31/12/2025 23:13</td>
+        </tr><tr>
+            <td>10</td>
+            <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>10</td>
+            <td>11</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>11</td>
+            <td>12</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>12</td>
+            <td>13</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 22:7</td>
         </tr><tr>
-            <td>13</td>
+            <td>14</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:#777;">31/12/2025 22:7</td>
         </tr><tr>
-            <td>14</td>
+            <td>15</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
@@ -3322,7 +3595,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 <input id="edit-index" type="hidden" value="-1">
 <div class="form-group">
 <label class="form-label">Môn thi:</label>
-<select class="form-control" id="inp-subject"><option value="Nguyên Lý Hệ Điều Hành">Nguyên Lý Hệ Điều Hành</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
+<select class="form-control" id="inp-subject"><option value="Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)">Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)</option><option value="Cấu trúc dữ liệu &amp; thuật toán">Cấu trúc dữ liệu &amp; thuật toán</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn">(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</option><option value="(HDH) Chương 3: quản lý bộ nhớ Phân Trang">(HDH) Chương 3: quản lý bộ nhớ Phân Trang</option><option value="(HDH) Chương 4">(HDH) Chương 4</option></select>
 </div>
 <div class="form-group">
 <label class="form-label">Nội dung câu hỏi:</label>
@@ -3410,7 +3683,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3423,7 +3696,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 1,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3438,7 +3711,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 2,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3457,7 +3730,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Chương trình được xây dựng theo cấu trúc nạp động có thể thực hiện trong vùng nhớ có kích thước nhỏ hơn kích thước chương trình",
@@ -3467,7 +3740,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3482,7 +3755,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3501,7 +3774,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Trong FAT32, vùng hệ thống bao gồm:",
@@ -3513,7 +3786,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3528,7 +3801,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3543,7 +3816,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3558,7 +3831,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3571,7 +3844,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3590,7 +3863,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Cấu trúc một phần tử ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000 Số hiệu cluster bắt đầu là:",
@@ -3602,7 +3875,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3621,7 +3894,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Hệ thống có một vi xử lý thì chỉ có duy nhất một tiến trình nằm trong bộ nhớ",
@@ -3631,7 +3904,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3646,7 +3919,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3661,7 +3934,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3680,7 +3953,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Trong chế độ phân trang, để đọc/ghi dữ liệu cần mấy lần truy nhập vật lý:",
@@ -3692,7 +3965,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3707,7 +3980,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3722,7 +3995,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3737,7 +4010,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3750,7 +4023,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3765,7 +4038,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3780,7 +4053,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3795,7 +4068,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3810,7 +4083,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3825,7 +4098,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3840,7 +4113,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3855,7 +4128,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3868,7 +4141,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3883,7 +4156,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3896,7 +4169,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3915,7 +4188,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Phát biểu sau là tính chất nào của hệ điều hành: \"Mọi công việc trong hệ thống đều phải có kiểm tra\":",
@@ -3927,7 +4200,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3946,7 +4219,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Trong phần tử FAT32, trường lưu thông tin kích thước của FAT có offset:",
@@ -3958,7 +4231,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -3977,7 +4250,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Đặc điểm nào không phải là của cấu trúc chương trình tuyến tính:",
@@ -3989,7 +4262,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4006,7 +4279,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Cấu trúc một phần tử ROOT cho như sau: 52454144 4D425220 43202020 003C865B A53EA53E 0000CF79 A53E402E BD0A0000. Thời điểm (h/m/s) cập nhật cuối là:",
@@ -4022,7 +4295,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Tại sao chiến lược phân đoạn có thể bảo vệ mã chương trình tốt hơn?",
@@ -4034,7 +4307,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4049,7 +4322,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4068,7 +4341,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Đoạn 1: M = 1, Base = 6300, Length = 400 Hỏi địa chỉ vật lý của <1, 350>?",
@@ -4080,7 +4353,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4095,7 +4368,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4110,7 +4383,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4125,7 +4398,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4140,7 +4413,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4155,7 +4428,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4170,7 +4443,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4185,7 +4458,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4200,7 +4473,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4215,7 +4488,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4230,7 +4503,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4245,7 +4518,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4260,7 +4533,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4275,7 +4548,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4290,7 +4563,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4305,7 +4578,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4320,7 +4593,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4335,7 +4608,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4350,7 +4623,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4365,7 +4638,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4380,7 +4653,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4399,7 +4672,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Phương pháp phân phối bộ nhớ nào gặp phải hiện tượng phân mảnh bộ nhớ?",
@@ -4416,7 +4689,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Hãy xem xét một đĩa có các khối 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 17, 18, 25, 26 và 27 còn trống và các khối còn lại được phân bổ. Do đó, bitmap không gian trống sẽ là",
@@ -4432,7 +4705,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Điều gì xảy ra trong thư mục một mức?",
@@ -4444,7 +4717,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4459,7 +4732,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành",
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "image": null,
             "math": null,
             "code": null
@@ -4478,7 +4751,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ],
             "answer": 0,
             "note": "",
-            "subject": "Nguyên Lý Hệ Điều Hành"
+            "subject": "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)"
         },
         {
             "question": "Khái niệm nào được sử dụng để mô tả tốc độ tăng tiệm cận chặt của hàm thời gian tính $f(n)$?",
@@ -7103,6 +7376,14 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
     ],
     "leaderboard": [
         {
+            "date": "1/1/2026 18:41",
+            "name": "Tran Anh",
+            "subject": "(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn",
+            "score": 6,
+            "correct": 6,
+            "total": 10
+        },
+        {
             "date": "1/1/2026 15:29",
             "name": "T",
             "subject": "Nguyên Lý Hệ Điều Hành",
@@ -7217,7 +7498,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
     ],
     "config": {
         "subjects": [
-            "Nguyên Lý Hệ Điều Hành",
+            "Nguyên Lý Hệ Điều Hành (Chưa xong đáp án)",
             "Cấu trúc dữ liệu & thuật toán",
             "(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn",
             "(HDH) Chương 3: quản lý bộ nhớ Phân Trang",
@@ -8622,4 +8903,4 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 </script>
-</body></html>
+</body><en2vi-host class="corom-element" version="3" style="all: initial; position: absolute; top: 0; left: 0; right: 0; height: 0; margin: 0; text-align: left; z-index: 10000000000; pointer-events: none; border: none; display: block"></en2vi-host><savior-host style="all: unset; position: absolute; top: 0; left: 0; z-index: 99999999999999; display: block !important; overflow: unset"></savior-host></html>
