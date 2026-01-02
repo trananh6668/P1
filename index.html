@@ -318,6 +318,158 @@
 .CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
 .CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
 .CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
+</style><style type="text/css">.CtxtMenu_InfoClose {  top:.2em; right:.2em;}
+.CtxtMenu_InfoContent {  overflow:auto; text-align:left; font-size:80%;  padding:.4em .6em; border:1px inset; margin:1em 0px;  max-height:20em; max-width:30em; background-color:#EEEEEE;  white-space:normal;}
+.CtxtMenu_Info.CtxtMenu_MousePost {outline:none;}
+.CtxtMenu_Info {  position:fixed; left:50%; width:auto; text-align:center;  border:3px outset; padding:1em 2em; background-color:#DDDDDD;  color:black;  cursor:default; font-family:message-box; font-size:120%;  font-style:normal; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 15px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius:15px;               /* Safari and Chrome */  -moz-border-radius:15px;                  /* Firefox */  -khtml-border-radius:15px;                /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */  filter:progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color="gray", Positive="true"); /* IE */}
+</style><style type="text/css">.CtxtMenu_MenuClose {  position:absolute;  cursor:pointer;  display:inline-block;  border:2px solid #AAA;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  font-family: "Courier New", Courier;  font-size:24px;  color:#F0F0F0}
+.CtxtMenu_MenuClose span {  display:block; background-color:#AAA; border:1.5px solid;  border-radius:18px;  -webkit-border-radius: 18px;             /* Safari and Chrome */  -moz-border-radius: 18px;                /* Firefox */  -khtml-border-radius: 18px;              /* Konqueror */  line-height:0;  padding:8px 0 6px     /* may need to be browser-specific */}
+.CtxtMenu_MenuClose:hover {  color:white!important;  border:2px solid #CCC!important}
+.CtxtMenu_MenuClose:hover span {  background-color:#CCC!important}
+.CtxtMenu_MenuClose:hover:focus {  outline:none}
+</style><style type="text/css">.CtxtMenu_Menu {  position:absolute;  background-color:white;  color:black;  width:auto; padding:5px 0px;  border:1px solid #CCCCCC; margin:0; cursor:default;  font: menu; text-align:left; text-indent:0; text-transform:none;  line-height:normal; letter-spacing:normal; word-spacing:normal;  word-wrap:normal; white-space:nowrap; float:none; z-index:201;  border-radius: 5px;                     /* Opera 10.5 and IE9 */  -webkit-border-radius: 5px;             /* Safari and Chrome */  -moz-border-radius: 5px;                /* Firefox */  -khtml-border-radius: 5px;              /* Konqueror */  box-shadow:0px 10px 20px #808080;         /* Opera 10.5 and IE9 */  -webkit-box-shadow:0px 10px 20px #808080; /* Safari 3 & Chrome */  -moz-box-shadow:0px 10px 20px #808080;    /* Forefox 3.5 */  -khtml-box-shadow:0px 10px 20px #808080;  /* Konqueror */}
+.CtxtMenu_MenuItem {  padding: 1px 2em;  background:transparent;}
+.CtxtMenu_MenuArrow {  position:absolute; right:.5em; padding-top:.25em; color:#666666;  font-family: null; font-size: .75em}
+.CtxtMenu_MenuActive .CtxtMenu_MenuArrow {color:white}
+.CtxtMenu_MenuArrow.CtxtMenu_RTL {left:.5em; right:auto}
+.CtxtMenu_MenuCheck {  position:absolute; left:.7em;  font-family: null}
+.CtxtMenu_MenuCheck.CtxtMenu_RTL { right:.7em; left:auto }
+.CtxtMenu_MenuRadioCheck {  position:absolute; left: .7em;}
+.CtxtMenu_MenuRadioCheck.CtxtMenu_RTL {  right: .7em; left:auto}
+.CtxtMenu_MenuInputBox {  padding-left: 1em; right:.5em; color:#666666;  font-family: null;}
+.CtxtMenu_MenuInputBox.CtxtMenu_RTL {  left: .1em;}
+.CtxtMenu_MenuComboBox {  left:.1em; padding-bottom:.5em;}
+.CtxtMenu_MenuSlider {  left: .1em;}
+.CtxtMenu_SliderValue {  position:absolute; right:.1em; padding-top:.25em; color:#333333;  font-size: .75em}
+.CtxtMenu_SliderBar {  outline: none; background: #d3d3d3}
+.CtxtMenu_MenuLabel {  padding: 1px 2em 3px 1.33em;  font-style:italic}
+.CtxtMenu_MenuRule {  border-top: 1px solid #DDDDDD;  margin: 4px 3px;}
+.CtxtMenu_MenuDisabled {  color:GrayText}
+.CtxtMenu_MenuActive {  background-color: #606872;  color: white;}
+.CtxtMenu_MenuDisabled:focus {  background-color: #E8E8E8}
+.CtxtMenu_MenuLabel:focus {  background-color: #E8E8E8}
+.CtxtMenu_ContextMenu:focus {  outline:none}
+.CtxtMenu_ContextMenu .CtxtMenu_MenuItem:focus {  outline:none}
+.CtxtMenu_SelectionMenu {  position:relative; float:left;  border-bottom: none; -webkit-box-shadow:none; -webkit-border-radius:0px; }
+.CtxtMenu_SelectionItem {  padding-right: 1em;}
+.CtxtMenu_Selection {  right: 40%; width:50%; }
+.CtxtMenu_SelectionBox {  padding: 0em; max-height:20em; max-width: none;  background-color:#FFFFFF;}
+.CtxtMenu_SelectionDivider {  clear: both; border-top: 2px solid #000000;}
+.CtxtMenu_Menu .CtxtMenu_MenuClose {  top:-10px; left:-10px}
 </style>
 <style>
     :root {
@@ -952,7 +1104,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 </div>
 </div>
 <div class="config-section">
-<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 72</p>
+<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 242</p>
 <h3>Cấu hình bài thi</h3>
 <div class="time-config-row">
 <div style="display:flex; align-items:center; gap:5px;">
@@ -3038,104 +3190,111 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 </thead>
 <tbody id="rank-body"><tr>
             <td>1</td>
+            <td style="font-weight:600">1</td>
+            <td>Test</td>
+            <td><span style="color:var(--success-color)">0</span>/1</td>
+            <td style="font-weight:bold; color:var(--primary-color)">0</td>
+            <td style="font-size:0.85em; color:inherit;">2/1/2026 21:19</td>
+        </tr><tr>
+            <td>2</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn</td>
             <td><span style="color:var(--success-color)">6</span>/10</td>
             <td style="font-weight:bold; color:var(--primary-color)">6</td>
             <td style="font-size:0.85em; color:inherit;">1/1/2026 18:41</td>
         </tr><tr>
-            <td>2</td>
+            <td>3</td>
             <td style="font-weight:600">T</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">1/1/2026 15:29</td>
         </tr><tr>
-            <td>3</td>
+            <td>4</td>
             <td style="font-weight:600">Thu Nguyen</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">1</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:inherit;">1/1/2026 0:13</td>
         </tr><tr>
-            <td>4</td>
+            <td>5</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">1</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:inherit;">1/1/2026 0:3</td>
         </tr><tr>
-            <td>5</td>
+            <td>6</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 23:46</td>
         </tr><tr>
-            <td>6</td>
+            <td>7</td>
             <td style="font-weight:600">Test</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">1</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0.1</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 23:34</td>
         </tr><tr>
-            <td>7</td>
+            <td>8</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 23:14</td>
         </tr><tr>
-            <td>8</td>
+            <td>9</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
-            <td style="font-weight:bold; color:var(--primary-color)">0</td>
-            <td style="font-size:0.85em; color:inherit;">31/12/2025 23:13</td>
-        </tr><tr>
-            <td>9</td>
-            <td style="font-weight:600">Tran Anh</td>
-            <td>Tất cả môn</td>
-            <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 23:13</td>
         </tr><tr>
             <td>10</td>
             <td style="font-weight:600">Tran Anh</td>
+            <td>Tất cả môn</td>
+            <td><span style="color:var(--success-color)">0</span>/212</td>
+            <td style="font-weight:bold; color:var(--primary-color)">0</td>
+            <td style="font-size:0.85em; color:inherit;">31/12/2025 23:13</td>
+        </tr><tr>
+            <td>11</td>
+            <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>11</td>
+            <td>12</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>12</td>
+            <td>13</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 22:13</td>
         </tr><tr>
-            <td>13</td>
+            <td>14</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Nguyên Lý Hệ Điều Hành</td>
             <td><span style="color:var(--success-color)">0</span>/72</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 22:7</td>
         </tr><tr>
-            <td>14</td>
+            <td>15</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Cấu trúc dữ liệu &amp; thuật toán</td>
             <td><span style="color:var(--success-color)">0</span>/140</td>
             <td style="font-weight:bold; color:var(--primary-color)">0</td>
             <td style="font-size:0.85em; color:inherit;">31/12/2025 22:7</td>
         </tr><tr>
-            <td>15</td>
+            <td>16</td>
             <td style="font-weight:600">Tran Anh</td>
             <td>Tất cả môn</td>
             <td><span style="color:var(--success-color)">0</span>/212</td>
@@ -3179,15 +3338,18 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 <textarea class="form-control" id="inp-question" placeholder="Nhập câu hỏi..." rows="2" style="height: 155px;"></textarea>
 </div>
 <div class="form-group">
-<label class="form-label">Hình ảnh (Optional):</label>
-<input id="inp-image-data" type="hidden" value="">
-<div class="paste-area" id="paste-area">
-<p style="margin: 0; color: #777;">Paste (Ctrl+V) hoặc Click chọn ảnh</p>
-<input accept="image/*" id="inp-file-hidden" onchange="Manager.handleFileSelect(this)" style="display:none;" type="file">
-<img alt="Preview" class="img-preview-box" id="img-preview" src="" style="display: none;">
-<br>
-<button class="btn btn-danger btn-sm" id="btn-clear-img" onclick="Manager.clearImage()" style="display: none; margin-top: 10px;" type="button">Xóa ảnh</button>
-</div>
+    <label class="form-label">Hình ảnh (Optional):</label>
+    <input type="hidden" id="inp-image-data" value="">
+    
+    <input type="text" class="form-control" id="inp-img-link" placeholder="Dán đường dẫn ảnh (URL) vào đây..." style="margin-bottom: 8px;" onchange="Manager.handleLinkChange(this)">
+    
+    <div class="paste-area" id="paste-area">
+        <p style="margin: 0; color: #777;">Paste (Ctrl+V) hoặc Click chọn file ảnh</p>
+        <input type="file" id="inp-file-hidden" accept="image/*" style="display:none;" onchange="Manager.handleFileSelect(this)">
+        <img id="img-preview" src="" alt="Preview" class="img-preview-box" style="display: none;">
+        <br>
+        <button type="button" class="btn btn-danger btn-sm" id="btn-clear-img" onclick="Manager.clearImage()" style="display: none; margin-top: 10px;">Xóa ảnh</button>
+    </div>
 </div>
 <div class="form-group">
 <label class="form-label">Công thức Toán (LaTeX):</label>
@@ -3235,8 +3397,8 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 <button class="btn btn-secondary btn-sm" onclick="Manager.addOptionUI()" style="margin-top: 5px;" type="button">+ Thêm dòng</button>
 </div>
 <div class="form-group">
-<label class="form-label">Giải thích:</label>
-<input class="form-control" id="inp-note" placeholder="Giải thích vì sao đúng..." type="text">
+    <label class="form-label">Giải thích:</label>
+    <textarea class="form-control" id="inp-note" placeholder="Giải thích chi tiết vì sao đúng..." rows="3" style="min-height: 80px; resize: vertical; font-family: inherit;"></textarea>
 </div>
 <div style="text-align: right; margin-top: 20px; border-top: 1px solid #eee; padding-top: 15px;">
 <button class="btn btn-secondary" onclick="Manager.closeModal()">Hủy (Esc)</button>
@@ -6953,6 +7115,14 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
     ],
     "leaderboard": [
         {
+            "date": "2/1/2026 21:19",
+            "name": 1,
+            "subject": "Test",
+            "score": 0,
+            "correct": 0,
+            "total": 1
+        },
+        {
             "date": "1/1/2026 18:41",
             "name": "Tran Anh",
             "subject": "(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn",
@@ -7080,7 +7250,8 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             "(HDH) Chương 3: quản lý bộ nhớ Phân Đoạn",
             "(HDH) Chương 3: quản lý bộ nhớ Phân Trang",
             "(HDH) Chương 4"
-        ]
+        ],
+        "adminHash": "615ed7fb1504b0c724a296d7a69e6c7b2f9ea2c57c1d8206c5afdf392ebdfd25"
     }
 }/*DATA_END*/;
 
@@ -7181,8 +7352,8 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
     }
     function handleEnterLogin(e) { if(e.key === 'Enter') checkAdminLogin(); }
 
-    // ==========================================
-    // DATA & FILE MANAGER
+// ==========================================
+    // DATA & FILE MANAGER (FULL CODE)
     // ==========================================
     const DataManager = {
         STORAGE_KEY: 'quiz_app_pro_v5',
@@ -7190,73 +7361,65 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
         SUB_KEY: 'quiz_app_last_subject',
 
         init: function() {
-            // 1. Kiểm tra xem file này có dữ liệu "nhúng" sẵn không (File đã được Save As Html)
-            // Nếu biến GLOBAL_DATA đã có câu hỏi (do file HTML chứa sẵn), ta sẽ ƯU TIÊN dùng nó.
-            const hasEmbeddedData = GLOBAL_DATA.questions && GLOBAL_DATA.questions.length > 0;
-
+            // BƯỚC 1: LOAD DỮ LIỆU TỪ CACHE (LOCALSTORAGE)
             const savedData = localStorage.getItem(this.STORAGE_KEY);
+            
+            // Mặc định sử dụng dữ liệu cứng trong file HTML (GLOBAL_DATA gốc)
+            // Nếu file vừa được Save HTML, GLOBAL_DATA sẽ chứa mật khẩu mới.
             
             if (savedData) {
                 try {
                     const parsed = JSON.parse(savedData);
                     
-                    if (hasEmbeddedData) {
-                        // Trường hợp A: File HTML có chứa dữ liệu (Backup)
-                        // -> Ta dùng dữ liệu của file này, KHÔNG lấy từ LocalStorage cũ.
-                        console.log("Phát hiện dữ liệu có sẵn trong file HTML. Ưu tiên sử dụng.");
+                    // Kiểm tra xem file HTML này có chứa câu hỏi cứng không (file vừa Save As HTML)
+                    const isHTMLHasData = (GLOBAL_DATA.questions && GLOBAL_DATA.questions.length > 0);
+                    
+                    if (isHTMLHasData) {
+                        // === ƯU TIÊN DỮ LIỆU CỦA FILE HTML (QUAN TRỌNG) ===
+                        // Nếu file HTML này là file đã Save, ta dùng Config và Question của nó.
+                        // Chỉ lấy Lịch sử thi (Leaderboard) từ Cache cũ để không mất lịch sử người dùng.
+                        if (parsed.leaderboard) GLOBAL_DATA.leaderboard = parsed.leaderboard;
                         
-                        // Kiểm tra và bổ sung config nếu thiếu (phòng hờ)
-                        if (!GLOBAL_DATA.config) GLOBAL_DATA.config = parsed.config || { subjects: ["Chung"] };
-                        if (!GLOBAL_DATA.config.subjects) GLOBAL_DATA.config.subjects = ["Chung"];
-                        
-                        // Quan trọng: Lưu ngược dữ liệu từ file này vào LocalStorage 
-                        // để lần sau refresh trang (F5) vẫn giữ được dữ liệu mới này.
-                        localStorage.setItem(this.STORAGE_KEY, JSON.stringify(GLOBAL_DATA));
-                        
+                        // KHÔNG ghi đè Config từ Cache, để bảo toàn mật khẩu mới trong HTML
                     } else {
-                        // Trường hợp B: File HTML rỗng (File gốc/Template) -> Nạp dữ liệu cũ từ LocalStorage
-                        if (!parsed.config) parsed.config = { subjects: ["Chung"] };
-                        if (!parsed.leaderboard) parsed.leaderboard = [];
-                        
-                        // Ghi đè dữ liệu rỗng bằng dữ liệu trong bộ nhớ
+                        // Nếu file HTML rỗng (chạy lần đầu hoặc reload trên file gốc) -> Load toàn bộ từ Cache
                         GLOBAL_DATA = parsed;
                     }
                 } catch (e) { 
-                    console.error("Lỗi parse LocalStorage:", e); 
-                    // Nếu lỗi cache thì ưu tiên dùng data trong file (nếu có)
+                    console.error("Lỗi parse cache:", e); 
+                    localStorage.removeItem(this.STORAGE_KEY);
                 }
             } else {
-                // Nếu chưa có LocalStorage mà file HTML có dữ liệu -> Lưu file vào LocalStorage luôn
-                if (hasEmbeddedData) {
-                    localStorage.setItem(this.STORAGE_KEY, JSON.stringify(GLOBAL_DATA));
-                }
+                // Chưa có cache -> Lưu dữ liệu hiện tại vào cache
+                localStorage.setItem(this.STORAGE_KEY, JSON.stringify(GLOBAL_DATA));
             }
 
-            // 2. Đảm bảo cấu trúc dữ liệu chuẩn xác sau khi load
-            if (!GLOBAL_DATA.questions) GLOBAL_DATA.questions = [];
+            // BƯỚC 2: ĐẢM BẢO CONFIG TỒN TẠI
             if (!GLOBAL_DATA.config) GLOBAL_DATA.config = { subjects: ["Chung"] };
-            if (!GLOBAL_DATA.config.subjects) GLOBAL_DATA.config.subjects = ["Chung"];
             
-            // Gán biến tham chiếu
+            // *** ĐÃ XÓA BỎ ĐOẠN "FIX LỖI MẬT KHẨU" GHI ĐÈ Ở ĐÂY ***
+            // Bây giờ nó sẽ dùng GLOBAL_DATA.config.adminHash được load từ file HTML hoặc Cache.
+
+            // Cập nhật ngược lại vào LocalStorage để đồng bộ
+            localStorage.setItem(this.STORAGE_KEY, JSON.stringify(GLOBAL_DATA));
+
+            // BƯỚC 3: KHỞI TẠO GIAO DIỆN
             QUESTION_DB = GLOBAL_DATA.questions;
 
-            // 3. Khôi phục trạng thái người dùng (Tên, Môn thi chọn lần cuối)
+            // Khôi phục tên thí sinh
             const lastName = localStorage.getItem(this.NAME_KEY);
             if(lastName) document.getElementById('student-name').value = lastName;
 
-            // Render lại giao diện
+            // Render các phần khác
             this.renderLeaderboard();
             Manager.updateSubjectLists();
             
-            // Khôi phục lựa chọn môn thi lần trước
+            // Khôi phục môn thi đã chọn
             const lastSub = localStorage.getItem(this.SUB_KEY);
             const userSel = document.getElementById('user-subject-select');
-            
             if(lastSub && (lastSub === 'ALL' || GLOBAL_DATA.config.subjects.includes(lastSub))) {
-                 userSel.value = lastSub;
-            } else {
-                 userSel.value = "ALL";
-            }
+                    userSel.value = lastSub;
+            } else { userSel.value = "ALL"; }
 
             QuizApp.updateSubjectInfo();
         },
@@ -7270,207 +7433,147 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             Manager.updateSubjectLists();
         },
 
-        reloadFromHTML: function() {
-            if(!confirm("Bạn có chắc chắn muốn load lại dữ liệu từ mã nguồn gốc? Mọi thay đổi chưa lưu ra file sẽ mất.")) return;
-            const htmlContent = document.documentElement.outerHTML;
-            const regex = /\/\*DATA_START\*\/([\s\S]*?)\/\*DATA_END\*\//;
-            const match = htmlContent.match(regex);
-            
-            if (match && match[1]) {
-                try {
-                    const codeData = JSON.parse(match[1]);
-                    GLOBAL_DATA = codeData;
-                    QUESTION_DB = GLOBAL_DATA.questions;
-                    this.saveToLocal(); 
-                    alert("Đã khôi phục dữ liệu gốc từ HTML!");
-                    location.reload();
-                } catch (e) { alert("Lỗi parse JSON từ HTML: " + e.message); }
+        // --- HÀM TẠO DỮ LIỆU EXPORT THEO CẤU TRÚC MỚI ---
+    _generateCustomRows: function() {
+        return QUESTION_DB.map((q, index) => {
+            // Xử lý đáp án đúng (gộp bằng ///)
+            let correctText = "";
+            if(Array.isArray(q.answer)) {
+                let sortedAns = [...q.answer].sort((a,b)=>a-b);
+                correctText = sortedAns.map(i => (q.options[i] || "")).join("///");
             } else {
-                alert("Không tìm thấy block dữ liệu gốc trong HTML.");
-            }
-        },
-
-        saveAsHtml: function() {
-            // 1. Tạm ẩn giao diện Admin để file html tải về trông sạch sẽ (như lúc chưa đăng nhập)
-            const loginPanel = document.getElementById('admin-login-panel');
-            const contentPanel = document.getElementById('admin-content-panel');
-            const wasLoggedIn = contentPanel.style.display === 'block';
-            
-            loginPanel.style.display = 'block';
-            contentPanel.style.display = 'none';
-            document.getElementById('admin-password-input').value = ''; 
-
-            // 2. Lấy toàn bộ mã nguồn HTML hiện tại của trang
-            let fullHTML = document.documentElement.outerHTML;
-            
-            // 3. Chuyển dữ liệu hiện tại (đã nạp JSON, đã thêm môn...) thành chuỗi văn bản
-            let jsonData = JSON.stringify(GLOBAL_DATA, null, 4);
-            
-            // Regex tìm vị trí lưu dữ liệu
-            const regex = /\/\*DATA_START\*\/[\s\S]*?\/\*DATA_END\*\//;
-            
-            // Khôi phục lại giao diện cho người dùng hiện tại (để không bị giật màn hình)
-            if (wasLoggedIn) {
-                loginPanel.style.display = 'none';
-                contentPanel.style.display = 'block';
+                correctText = q.options[q.answer] || "";
             }
 
-            // 4. Thực hiện thay thế dữ liệu cũ trong HTML bằng dữ liệu mới
-            if (regex.test(fullHTML)) {
-                // Quan trọng: Sử dụng biến jsonData chứa dữ liệu thật
-                const newContent = `/*DATA_START*/${jsonData}/*DATA_END*/`;
-                
-                fullHTML = fullHTML.replace(regex, newContent);
-                
-                // 5. Tải file về
-                const blob = new Blob([fullHTML], {type: "text/html"});
-                const link = document.createElement("a");
-                link.href = URL.createObjectURL(blob);
-                const d = new Date();
-                // Đặt tên file có ngày tháng
-                link.download = `TracNghiem_Pro_${d.getDate()}_${d.getMonth()+1}_${d.getFullYear()}.html`;
-                link.click();
-                
-                // Giải phóng bộ nhớ
-                URL.revokeObjectURL(link.href);
-                alert("Đã lưu thành công file HTML mới chứa toàn bộ dữ liệu hiện tại!");
-            } else {
-                alert("Lỗi nghiêm trọng: Không tìm thấy vị trí đánh dấu /*DATA_START*/ trong mã nguồn để lưu.");
+            // Xử lý Link ảnh
+            let imgLink = "";
+            if (q.image && (q.image.startsWith("http") || q.image.startsWith("//"))) {
+                imgLink = q.image;
             }
-        },
 
-        _generateDataRows: function() {
-             return QUESTION_DB.map(q => {
-                let correctText = "";
-                if(Array.isArray(q.answer)) {
-                    correctText = q.answer.map(i => (q.options[i] || "")).join(" | ");
-                } else {
-                    correctText = q.options[q.answer] || "";
-                }
+            // Tạo object cơ bản
+            let row = {
+                "STT": index + 1,
+                "Môn thi": q.subject || "Chung",
+                "Câu hỏi": q.question || "",
+                "Link hình ảnh": imgLink,
+                "Data Code": q.code || "",
+                "Ngôn ngữ Code": q.lang || "plaintext", // <--- THÊM CỘT NÀY
+                "Đáp án đúng": correctText,
+                "Giải thích": q.note || ""
+            };
 
-                return {
-                    "Môn thi": q.subject || "Chung",
-                    "Câu hỏi": q.question || "",
-                    "Đáp án đúng (Text)": correctText,
-                    "Đáp án 1": q.options[0] || "",
-                    "Đáp án 2": q.options[1] || "",
-                    "Đáp án 3": q.options[2] || "",
-                    "Đáp án 4": q.options[3] || "",
-                    "Giải thích": q.note || ""
-                };
+            // Thêm các đáp án động
+            q.options.forEach((opt, i) => {
+                row[`Đáp án ${i + 1}`] = opt;
             });
-        },
 
-        // --- EXCEL LOGIC (Yêu cầu thư viện) ---
+            return row;
+        });
+    },
+
+        // --- EXCEL LOGIC ---
         _checkExcelLib: function() {
             if(typeof XLSX === 'undefined') {
-                alert("❌ Lỗi: Thư viện Excel (SheetJS) chưa được tải!\n\nNếu bạn đang dùng Offline, vui lòng sử dụng nút 'CSV (Offline)' bên cạnh.\nCSV hoạt động tốt mà không cần mạng.");
+                alert("Thư viện Excel chưa tải xong. Hãy dùng nút CSV.");
                 return false;
             }
             return true;
         },
 
-        exportExcel: function() {
-            if(!this._checkExcelLib()) return;
-            if (QUESTION_DB.length === 0) return alert("Không có dữ liệu!");
-            const rows = this._generateDataRows();
-            const worksheet = XLSX.utils.json_to_sheet(rows);
-            const workbook = XLSX.utils.book_new();
-            XLSX.utils.book_append_sheet(workbook, worksheet, "NganHangCauHoi");
-            XLSX.writeFile(workbook, "CauHoi_Export.xlsx");
-        },
+        // --- EXCEL EXPORT (CẬP NHẬT) ---
+    exportExcel: function() {
+        if(!this._checkExcelLib()) return;
+        if (QUESTION_DB.length === 0) return alert("Không có dữ liệu!");
+        
+        const rows = this._generateCustomRows();
+        const worksheet = XLSX.utils.json_to_sheet(rows);
+        
+        // Chỉnh độ rộng cột (Thêm 1 cột độ rộng 15 cho Ngôn ngữ Code)
+        const wscols = [
+            {wch: 5},  // STT
+            {wch: 25}, // Môn thi
+            {wch: 50}, // Câu hỏi
+            {wch: 20}, // Ảnh
+            {wch: 20}, // Data Code
+            {wch: 15}, // Ngôn ngữ Code (MỚI)
+            {wch: 30}, // Đáp án đúng
+            {wch: 30}, // Giải thích
+            {wch: 20}, {wch: 20}, {wch: 20}, {wch: 20} // Các đáp án
+        ];
+        worksheet['!cols'] = wscols;
 
-        importExcel: function(inputElement) {
-            if(!this._checkExcelLib()) {
-                inputElement.value = ""; 
-                return;
-            }
-            const file = inputElement.files[0];
-            if (!file) return;
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                const data = new Uint8Array(e.target.result);
-                const workbook = XLSX.read(data, {type: 'array'});
-                const firstSheetName = workbook.SheetNames[0];
-                const worksheet = workbook.Sheets[firstSheetName];
-                const json = XLSX.utils.sheet_to_json(worksheet);
-                DataManager._processImportData(json);
-                inputElement.value = "";
-            };
-            reader.readAsArrayBuffer(file);
-        },
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, "NganHangCauHoi");
+        XLSX.writeFile(workbook, "CauHoi_Export_Pro.xlsx");
+    },
 
-        // --- CSV NATIVE LOGIC (Hoạt động Offline 100%) ---
-        exportCSV_Native: function() {
-            if (QUESTION_DB.length === 0) return alert("Không có dữ liệu!");
-            const data = this._generateDataRows();
-            const headers = ["Môn thi", "Câu hỏi", "Đáp án đúng (Text)", "Đáp án 1", "Đáp án 2", "Đáp án 3", "Đáp án 4", "Giải thích"];
-            
-            // Xây dựng nội dung CSV
-            let csvContent = headers.join(",") + "\n";
-            
-            data.forEach(row => {
-                let rowArr = [];
-                headers.forEach(header => {
-                    let val = row[header] || "";
-                    // Escape CSV: nếu có dấu phẩy hoặc xuống dòng, phải bao trong ngoặc kép
-                    val = String(val).replace(/"/g, '""'); // Escape ngoặc kép
-                    if (val.search(/("|,|\n)/g) >= 0) val = `"${val}"`;
-                    rowArr.push(val);
-                });
-                csvContent += rowArr.join(",") + "\n";
+        // --- CSV EXPORT (CẬP NHẬT) ---
+    exportCSV_Native: function() {
+        if (QUESTION_DB.length === 0) return alert("Không có dữ liệu!");
+        
+        // Tìm số lượng đáp án nhiều nhất
+        let maxOpts = 0;
+        QUESTION_DB.forEach(q => { if(q.options.length > maxOpts) maxOpts = q.options.length; });
+
+        // Tạo Header (Thêm Ngôn ngữ Code vào sau Data Code)
+        let headers = ["STT", "Môn thi", "Câu hỏi", "Link hình ảnh", "Data Code", "Ngôn ngữ Code", "Đáp án đúng", "Giải thích"];
+        for(let i=1; i<=maxOpts; i++) headers.push(`Đáp án ${i}`);
+
+        const data = this._generateCustomRows();
+        let csvContent = headers.join(",") + "\n";
+
+        data.forEach(row => {
+            let rowArr = [];
+            headers.forEach(header => {
+                let val = row[header] || "";
+                // Escape CSV
+                val = String(val).replace(/"/g, '""'); 
+                if (val.search(/("|,|\n)/g) >= 0) val = `"${val}"`;
+                rowArr.push(val);
             });
+            csvContent += rowArr.join(",") + "\n";
+        });
 
-            // Thêm BOM (\uFEFF) để Excel đọc đúng tiếng Việt
-            const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
-            const link = document.createElement("a");
-            link.href = URL.createObjectURL(blob);
-            link.download = "CauHoi_Offline.csv";
-            link.click();
-        },
+        const blob = new Blob(["\uFEFF" + csvContent], { type: 'text/csv;charset=utf-8;' });
+        const link = document.createElement("a");
+        link.href = URL.createObjectURL(blob);
+        link.download = "CauHoi_Offline_Pro.csv";
+        link.click();
+    },
 
         importCSV_Native: function(inputElement) {
             const file = inputElement.files[0];
             if (!file) return;
             const reader = new FileReader();
-            
             reader.onload = function(e) {
                 const text = e.target.result;
                 const rows = DataManager._parseCSV(text);
+                if(!rows || rows.length < 2) return alert("File lỗi hoặc rỗng!");
                 
-                if(!rows || rows.length < 2) return alert("File CSV không hợp lệ hoặc rỗng!");
-
-                // Chuyển mảng array thành mảng object json
                 const headers = rows[0]; 
                 const json = [];
-                
                 for(let i = 1; i < rows.length; i++) {
                     let rowData = rows[i];
-                    if(rowData.length < 2) continue; // Bỏ qua dòng trống
+                    if(rowData.length < 2) continue;
                     let obj = {};
-                    headers.forEach((h, index) => {
-                        obj[h.trim()] = rowData[index];
-                    });
+                    headers.forEach((h, index) => { obj[h.trim()] = rowData[index]; });
                     json.push(obj);
                 }
-                
                 DataManager._processImportData(json);
                 inputElement.value = "";
             };
             reader.readAsText(file);
         },
-
-        // Parser CSV thủ công (để xử lý dấu phẩy trong ngoặc kép)
+        
         _parseCSV: function(text) {
             let arr = [];
-            let quote = false;  // true nếu đang ở trong chuỗi "..."
+            let quote = false;  
             let row = [], col = "";
-            
             for (let c = 0; c < text.length; c++) {
                 let cc = text[c], nc = text[c+1];
-                
                 if (cc === '"') {
-                    if (quote && nc === '"') { col += '"'; c++; } // Gặp 2 dấu "" liên tiếp -> 1 dấu "
+                    if (quote && nc === '"') { col += '"'; c++; }
                     else { quote = !quote; } 
                 } else if (cc === ',' && !quote) {
                     row.push(col); col = "";
@@ -7479,117 +7582,203 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
                     if(row.length > 0) arr.push(row);
                     row = [];
                     if (cc === '\r' && nc === '\n') c++;
-                } else {
-                    col += cc;
-                }
+                } else { col += cc; }
             }
-            if(col.length > 0 || row.length > 0) {
-                 row.push(col);
-                 arr.push(row);
-            }
+            if(col.length > 0 || row.length > 0) { row.push(col); arr.push(row); }
             return arr;
         },
 
-        _processImportData: function(json) {
-            if (json.length === 0) return alert("File rỗng hoặc sai định dạng!");
-            if(confirm(`Tìm thấy ${json.length} câu hỏi. Bạn muốn GHI ĐÈ hay THÊM VÀO? (OK = Ghi đè, Cancel = Thêm vào)`)) {
-                GLOBAL_DATA.questions = [];
+        importExcel: function(inputElement) {
+             if(!this._checkExcelLib()) return;
+             const file = inputElement.files[0];
+             if (!file) return;
+             const reader = new FileReader();
+             reader.onload = function(e) {
+                 const data = new Uint8Array(e.target.result);
+                 const workbook = XLSX.read(data, {type: 'array'});
+                 const worksheet = workbook.Sheets[workbook.SheetNames[0]];
+                 const json = XLSX.utils.sheet_to_json(worksheet);
+                 DataManager._processImportData(json);
+                 inputElement.value = "";
+             };
+             reader.readAsArrayBuffer(file);
+        },
+
+        // --- XỬ LÝ NHẬP LIỆU (CẬP NHẬT ĐỂ ĐỌC CỘT MỚI) ---
+    _processImportData: function(json) {
+        if (json.length === 0) return alert("File rỗng!");
+        if(confirm(`Tìm thấy ${json.length} câu hỏi. \nOK = GHI ĐÈ (Xóa cũ)\nCancel = THÊM VÀO (Gộp)`)) {
+            GLOBAL_DATA.questions = [];
+        }
+
+        json.forEach(row => {
+            // Map dữ liệu
+            const qText = String(row["Câu hỏi"] || row["Question"] || "").trim();
+            if(!qText) return;
+            
+            const subject = String(row["Môn thi"] || row["Subject"] || "Chung").trim();
+            if(!GLOBAL_DATA.config.subjects.includes(subject)) GLOBAL_DATA.config.subjects.push(subject);
+
+            const note = String(row["Giải thích"] || row["Note"] || "");
+            
+            // Xử lý Code và Ngôn ngữ Code
+            const code = String(row["Data Code"] || row["Code"] || "");
+            // Đọc cột ngôn ngữ, mặc định là cpp nếu không có, hoặc plaintext nếu rỗng
+            let lang = String(row["Ngôn ngữ Code"] || row["Code Lang"] || "plaintext").trim().toLowerCase();
+            if(lang === "") lang = "plaintext";
+
+            // Ưu tiên Link hình ảnh
+            let img = String(row["Link hình ảnh"] || row["Image"] || "").trim();
+            
+            // Lấy đáp án
+            let opts = [];
+            Object.keys(row).forEach(key => {
+                if(key.startsWith("Đáp án") && !key.includes("đúng")) {
+                    if(row[key] != null && String(row[key]).trim() !== "") {
+                        opts.push(String(row[key]));
+                    }
+                }
+            });
+            
+            // Fallback cũ
+            if(opts.length === 0) {
+                 if(row["Đáp án 1"]) opts.push(String(row["Đáp án 1"]));
+                 if(row["Đáp án 2"]) opts.push(String(row["Đáp án 2"]));
+                 if(row["Đáp án 3"]) opts.push(String(row["Đáp án 3"]));
+                 if(row["Đáp án 4"]) opts.push(String(row["Đáp án 4"]));
             }
 
-            json.forEach(row => {
-                // FIXED: Ép kiểu String để tránh lỗi nếu câu hỏi là số
-                const qText = String(row["Câu hỏi"] || row["Question"] || "").trim();
-                if(!qText) return;
-                
-                const subject = String(row["Môn thi"] || "Chung").trim();
-                if(!GLOBAL_DATA.config.subjects.includes(subject)) {
-                    GLOBAL_DATA.config.subjects.push(subject);
-                }
-
-                // FIXED: Ép kiểu String cho đáp án đúng
-                const correctText = String(row["Đáp án đúng (Text)"] || "").trim();
-                const note = String(row["Giải thích"] || "");
-                
-                let opts = [];
-                // FIXED: Kiểm tra != null để nhận cả số 0
-                if(row["Đáp án 1"] != null) opts.push(String(row["Đáp án 1"]));
-                if(row["Đáp án 2"] != null) opts.push(String(row["Đáp án 2"]));
-                if(row["Đáp án 3"] != null) opts.push(String(row["Đáp án 3"]));
-                if(row["Đáp án 4"] != null) opts.push(String(row["Đáp án 4"]));
-                
-                let ansIndex = 0;
-                // FIXED: So sánh String
-                const foundIdx = opts.findIndex(o => String(o).trim() === correctText);
-                if(foundIdx !== -1) ansIndex = foundIdx;
-
-                GLOBAL_DATA.questions.push({
-                    question: qText, options: opts, answer: ansIndex, note: note,
-                    subject: subject, image: null, math: null, code: null 
+            // Xử lý đáp án đúng
+            const correctRaw = String(row["Đáp án đúng"] || row["Đáp án đúng (Text)"] || "").trim();
+            let ansIndex = 0;
+            
+            if (correctRaw.includes("///")) {
+                let correctParts = correctRaw.split("///").map(s => s.trim());
+                let indices = [];
+                correctParts.forEach(p => {
+                     let idx = opts.findIndex(o => String(o).trim() === p);
+                     if(idx !== -1) indices.push(idx);
                 });
+                if(indices.length > 0) ansIndex = indices;
+            } else {
+                let idx = opts.findIndex(o => String(o).trim() === correctRaw);
+                if(idx !== -1) ansIndex = idx;
+            }
+
+            GLOBAL_DATA.questions.push({
+                question: qText, options: opts, answer: ansIndex, note: note,
+                subject: subject, image: img || null, math: null, 
+                code: code || null, lang: lang // <-- Đã cập nhật
             });
-            QUESTION_DB = GLOBAL_DATA.questions;
-            DataManager.saveToLocal();
-            alert("Nhập dữ liệu thành công!");
-        },
+        });
+        QUESTION_DB = GLOBAL_DATA.questions;
+        DataManager.saveToLocal();
+        alert("Nhập dữ liệu thành công!");
+    },
 
         renderLeaderboard: function() {
-            const tbody = document.getElementById('rank-body');
-            tbody.innerHTML = '';
-            
-            const displayList = GLOBAL_DATA.leaderboard.slice(0, 50);
-            
-            displayList.forEach((row, index) => {
+             const tbody = document.getElementById('rank-body');
+             tbody.innerHTML = '';
+             const displayList = GLOBAL_DATA.leaderboard.slice(0, 50);
+             if(displayList.length === 0) tbody.innerHTML = '<tr><td colspan="6">Chưa có dữ liệu</td></tr>';
+             displayList.forEach((row, index) => {
                 const tr = document.createElement('tr');
-                tr.innerHTML = `
-                    <td>${index + 1}</td>
-                    <td style="font-weight:600">${Utils.escapeHtml(row.name)}</td>
-                    <td>${Utils.escapeHtml(row.subject)}</td>
-                    <td><span style="color:var(--success-color)">${row.correct}</span>/${row.total}</td>
-                    <td style="font-weight:bold; color:var(--primary-color)">${row.score}</td>
-                    <td style="font-size:0.85em; color:#777;">${row.date}</td>
-                `;
+                tr.innerHTML = `<td>${index+1}</td><td>${Utils.escapeHtml(row.name)}</td><td>${Utils.escapeHtml(row.subject)}</td><td><span style="color:green">${row.correct}</span>/${row.total}</td><td>${row.score}</td><td>${row.date}</td>`;
                 tbody.appendChild(tr);
-            });
-            if(displayList.length === 0) {
-                tbody.innerHTML = '<tr><td colspan="6">Chưa có dữ liệu</td></tr>';
+             });
+        },
+        
+        saveAsHtml: function() {
+             const loginPanel = document.getElementById('admin-login-panel');
+             const contentPanel = document.getElementById('admin-content-panel');
+             const wasLoggedIn = contentPanel.style.display === 'block';
+             loginPanel.style.display = 'block'; contentPanel.style.display = 'none';
+             document.getElementById('admin-password-input').value = ''; 
+             
+             let fullHTML = document.documentElement.outerHTML;
+             let jsonData = JSON.stringify(GLOBAL_DATA, null, 4);
+             const regex = /\/\*DATA_START\*\/[\s\S]*?\/\*DATA_END\*\//;
+             
+             if (wasLoggedIn) { loginPanel.style.display = 'none'; contentPanel.style.display = 'block'; }
+             
+             if (regex.test(fullHTML)) {
+                fullHTML = fullHTML.replace(regex, `/*DATA_START*/${jsonData}/*DATA_END*/`);
+                const blob = new Blob([fullHTML], {type: "text/html"});
+                const link = document.createElement("a");
+                link.href = URL.createObjectURL(blob);
+                const d = new Date();
+                link.download = `TracNghiem_Pro_${d.getDate()}_${d.getMonth()+1}.html`;
+                link.click();
+             } else { alert("Lỗi lưu file: Không tìm thấy vị trí chèn dữ liệu."); }
+        },
+		
+        reloadFromHTML: function() {
+            if (confirm("Bạn có chắc muốn tải lại dữ liệu gốc từ file HTML?\n(Các dữ liệu mới chưa lưu trong bộ nhớ tạm sẽ bị xóa)")) {
+                localStorage.removeItem(this.STORAGE_KEY);
+                location.reload();
+            }
+        },
+		
+        resetDefault: function() {
+            if(confirm("⚠ CẢNH BÁO: Xóa toàn bộ dữ liệu (Câu hỏi, Lịch sử)?")) {
+                localStorage.removeItem(this.STORAGE_KEY);
+                location.reload();
             }
         },
 
-        resetDefault: function() {
-            if(confirm("⚠ CẢNH BÁO: Xóa toàn bộ dữ liệu (Câu hỏi, Môn thi, Lịch sử)? Hành động này không thể hoàn tác!")) {
-                
-                // 1. Xóa sạch LocalStorage
-                localStorage.removeItem(this.STORAGE_KEY);
-                localStorage.removeItem(this.NAME_KEY);
-                localStorage.removeItem(this.SUB_KEY);
+        exportJSON: function() {
+            const dataStr = JSON.stringify(GLOBAL_DATA, null, 2);
+            const blob = new Blob([dataStr], { type: "application/json" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = "database_backup.json";
+            a.click();
+        },
 
-                // 2. Reset biến trong bộ nhớ
-                GLOBAL_DATA = { 
-                    questions: [], 
-                    leaderboard: [],
-                    config: { subjects: ["Chung"], adminHash: Utils.sha256("123") }
-                };
-                QUESTION_DB = GLOBAL_DATA.questions;
+        importJSONFile: function(inputElement) {
+            const file = inputElement.files[0];
+            if (!file) return;
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                try {
+                    const data = JSON.parse(e.target.result);
+                    DataManager.mergeData(data);
+                } catch (err) { alert("Lỗi JSON: " + err); }
+                inputElement.value = '';
+            };
+            reader.readAsText(file);
+        },
 
-                // --- 3. XÓA GIAO DIỆN NGAY LẬP TỨC (Fix lỗi bạn gặp) ---
-                // Xóa danh sách câu hỏi đang hiện
-                document.getElementById('question-list-container').innerHTML = '';
-                
-                // Reset số lượng câu hỏi về 0
-                document.getElementById('total-questions-count').innerText = '0';
-                
-                // Xóa bảng xếp hạng
-                document.getElementById('rank-body').innerHTML = '<tr><td colspan="6">Chưa có dữ liệu</td></tr>';
+        loadFromCloud: function() {
+            const url = document.getElementById('cloud-url').value.trim();
+            if (!url) return alert("Chưa nhập Link!");
+            fetch(url)
+                .then(r => r.json())
+                .then(d => { DataManager.mergeData(d); alert("Tải thành công!"); })
+                .catch(e => alert("Lỗi tải: " + e));
+        },
 
-                // 4. Thông báo và tải lại trang
-                alert("Đã xóa sạch dữ liệu!");
-             //   location.reload();
+        mergeData: function(data) {
+            if (!data.questions) return alert("Format sai!");
+            if (confirm("GHI ĐÈ dữ liệu cũ (OK) hay GỘP (Cancel)?")) {
+                GLOBAL_DATA = data;
+            } else {
+                GLOBAL_DATA.questions = GLOBAL_DATA.questions.concat(data.questions || []);
+                GLOBAL_DATA.leaderboard = GLOBAL_DATA.leaderboard.concat(data.leaderboard || []);
+                // Update subjects
+                const subSet = new Set(GLOBAL_DATA.config.subjects);
+                (data.config?.subjects || []).forEach(s => subSet.add(s));
+                GLOBAL_DATA.config.subjects = Array.from(subSet);
             }
+            QUESTION_DB = GLOBAL_DATA.questions;
+            DataManager.saveToLocal();
+            location.reload();
         }
     };
 
     // ==========================================
-    // MANAGER
+    // MANAGER (FULL CODE)
     // ==========================================
     const Manager = {
         currentTab: 'questions',
@@ -7606,7 +7795,6 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
         renderList: function() {
             const listContainer = document.getElementById('question-list-container');
             const filterSub = document.getElementById('admin-filter-subject').value;
-            
             let filteredDB = QUESTION_DB;
             if(filterSub !== 'ALL') {
                 filteredDB = QUESTION_DB.map((q, idx) => ({...q, originalIdx: idx}))
@@ -7614,10 +7802,8 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             } else {
                 filteredDB = QUESTION_DB.map((q, idx) => ({...q, originalIdx: idx}));
             }
-
             document.getElementById('total-questions-count').innerText = filteredDB.length;
             listContainer.innerHTML = '';
-            
             filteredDB.forEach((q) => {
                 const div = document.createElement('div');
                 div.className = 'q-list-item';
@@ -7655,16 +7841,12 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 
             const userSel = document.getElementById('user-subject-select');
             const currentUserSel = userSel.value;
-            
             let userOpts = '<option value="ALL">Tất cả môn</option>';
             subs.forEach(s => { userOpts += `<option value="${s}">${s}</option>`; });
             userSel.innerHTML = userOpts;
-
             if(currentUserSel && (currentUserSel === 'ALL' || subs.includes(currentUserSel))) {
                 userSel.value = currentUserSel;
-            } else {
-                 userSel.value = "ALL";
-            }
+            } else { userSel.value = "ALL"; }
         },
 
         renderSubjectList: function() {
@@ -7672,23 +7854,12 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             ul.innerHTML = '';
             GLOBAL_DATA.config.subjects.forEach((s, idx) => {
                 const li = document.createElement('li');
-                li.style.padding = "8px";
-                li.style.borderBottom = "1px solid #eee";
-                li.style.display = "flex";
-                li.style.justifyContent = "space-between";
+                li.style = "padding: 8px; border-bottom: 1px solid #eee; display: flex; justify-content: space-between;";
                 const count = QUESTION_DB.filter(q => q.subject === s).length;
-                
                 const deleteBtn = (count === 0 && GLOBAL_DATA.config.subjects.length > 1) 
                     ? `<button class="btn btn-danger btn-sm" onclick="Manager.removeSubject(${idx})">Xóa</button>` 
-                    : `<span style="color:#ccc; font-size:0.8em; margin-left:5px;">(Đang dùng)</span>`;
-
-                li.innerHTML = `
-                    <span><b>${s}</b> <small>(${count} câu)</small></span>
-                    <div>
-                        <button class="btn btn-primary btn-sm" onclick="Manager.editSubject(${idx})">✎ Sửa</button>
-                        ${deleteBtn}
-                    </div>
-                `;
+                    : `<span style="color:#ccc; font-size:0.8em;">(Đang dùng)</span>`;
+                li.innerHTML = `<span><b>${s}</b> <small>(${count} câu)</small></span><div><button class="btn btn-primary btn-sm" onclick="Manager.editSubject(${idx})">✎ Sửa</button>${deleteBtn}</div>`;
                 ul.appendChild(li);
             });
         },
@@ -7696,9 +7867,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
         addSubject: function() {
             const inp = document.getElementById('new-subject-input');
             const val = inp.value.trim();
-            if(!val) return alert("Chưa nhập tên môn!");
-            if(GLOBAL_DATA.config.subjects.includes(val)) return alert("Môn này đã tồn tại!");
-            
+            if(!val || GLOBAL_DATA.config.subjects.includes(val)) return;
             GLOBAL_DATA.config.subjects.push(val);
             DataManager.saveToLocal();
             inp.value = '';
@@ -7707,15 +7876,11 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 
         editSubject: function(idx) {
             const oldName = GLOBAL_DATA.config.subjects[idx];
-            const newName = prompt("Nhập tên mới cho môn thi:", oldName);
+            const newName = prompt("Tên môn mới:", oldName);
             if(newName && newName.trim() !== "" && newName !== oldName) {
-                if(GLOBAL_DATA.config.subjects.includes(newName)) return alert("Tên môn này đã tồn tại!");
-                
+                if(GLOBAL_DATA.config.subjects.includes(newName)) return;
                 GLOBAL_DATA.config.subjects[idx] = newName;
-                QUESTION_DB.forEach(q => {
-                    if(q.subject === oldName) q.subject = newName;
-                });
-                
+                QUESTION_DB.forEach(q => { if(q.subject === oldName) q.subject = newName; });
                 DataManager.saveToLocal();
                 this.renderSubjectList();
             }
@@ -7730,31 +7895,28 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
         },
 
         rememberSubject: function() {
-            const val = document.getElementById('user-subject-select').value;
-            localStorage.setItem(DataManager.SUB_KEY, val);
+            localStorage.setItem(DataManager.SUB_KEY, document.getElementById('user-subject-select').value);
         },
 
         changePassword: function() {
             const oldP = document.getElementById('old-pass').value;
             const newP = document.getElementById('new-pass').value;
-            
-            if(!oldP || !newP) return alert("Vui lòng điền đủ thông tin!");
-            
+            if(!oldP || !newP) return;
             const currentHash = GLOBAL_DATA.config.adminHash || Utils.sha256("123");
-            if(Utils.sha256(oldP) !== currentHash) return alert("Mật khẩu cũ không đúng!");
-            
+            if(Utils.sha256(oldP) !== currentHash) return alert("Mật khẩu cũ sai!");
             GLOBAL_DATA.config.adminHash = Utils.sha256(newP);
             DataManager.saveToLocal();
-            alert("Đổi mật khẩu thành công!");
-            document.getElementById('old-pass').value = "";
-            document.getElementById('new-pass').value = "";
+            alert("Đổi thành công!");
         },
 
+        // --- MODAL & IMAGE HANDLERS (UPDATED) ---
         openModal: function(index = -1) {
             const modal = document.getElementById('editor-modal');
             const container = document.getElementById('options-container');
             document.getElementById('edit-index').value = index;
             container.innerHTML = ''; 
+            
+            // Reset ảnh
             this.clearImage(true);
 
             if (index === -1) { 
@@ -7774,13 +7936,25 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
                 document.getElementById('modal-title').innerText = "Sửa câu hỏi #" + (index + 1);
                 document.getElementById('inp-subject').value = q.subject || GLOBAL_DATA.config.subjects[0];
                 document.getElementById('inp-question').value = q.question;
+                
+                // Hiển thị ảnh cũ
                 if(q.image) {
-                    document.getElementById('inp-image-data').value = q.image;
                     const img = document.getElementById('img-preview');
                     img.src = q.image;
                     img.style.display = 'block';
                     document.getElementById('btn-clear-img').style.display = 'inline-block';
+                    
+                    // Nếu là Link online
+                    if (q.image.startsWith("http") || q.image.startsWith("//")) {
+                        document.getElementById('inp-img-link').value = q.image;
+                        document.getElementById('inp-image-data').value = ""; // Clear base64 hidden
+                    } else {
+                        // Nếu là Base64
+                        document.getElementById('inp-image-data').value = q.image;
+                        document.getElementById('inp-img-link').value = "";
+                    }
                 }
+
                 document.getElementById('inp-math').value = q.math || "";
                 document.getElementById('inp-code').value = q.code || "";
                 document.getElementById('inp-code-lang').value = q.lang || "plaintext";
@@ -7795,25 +7969,38 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             modal.classList.add('active');
         },
 
+        // Xử lý khi người dùng dán Link
+        handleLinkChange: function(ele) {
+            const url = ele.value.trim();
+            if(url) {
+                const img = document.getElementById('img-preview');
+                img.src = url;
+                img.style.display = 'block';
+                document.getElementById('btn-clear-img').style.display = 'inline-block';
+                // Xóa dữ liệu file base64 để ưu tiên Link
+                document.getElementById('inp-image-data').value = "";
+                document.getElementById('inp-file-hidden').value = "";
+            } else {
+                this.clearImage();
+            }
+        },
+
         initImageHandlers: function() {
             const pasteArea = document.getElementById('paste-area');
             pasteArea.addEventListener('click', () => document.getElementById('inp-file-hidden').click());
             pasteArea.addEventListener('dragover', (e) => { e.preventDefault(); pasteArea.classList.add('dragover'); });
             pasteArea.addEventListener('dragleave', () => pasteArea.classList.remove('dragover'));
-            pasteArea.addEventListener('drop', (e) => {
-                e.preventDefault(); pasteArea.classList.remove('dragover');
-                if (e.dataTransfer.files && e.dataTransfer.files[0]) this.processImageFile(e.dataTransfer.files[0]);
-            });
-            document.addEventListener('paste', (e) => {
-                if (!document.getElementById('editor-modal').classList.contains('active')) return;
-                if (e.clipboardData && e.clipboardData.items) {
-                    for (let i = 0; i < e.clipboardData.items.length; i++) {
-                        if (e.clipboardData.items[i].type.indexOf("image") !== -1) {
-                            this.processImageFile(e.clipboardData.items[i].getAsFile());
-                            break;
-                        }
-                    }
-                }
+            pasteArea.addEventListener('drop', (e) => { e.preventDefault(); pasteArea.classList.remove('dragover'); if (e.dataTransfer.files && e.dataTransfer.files[0]) this.processImageFile(e.dataTransfer.files[0]); });
+            document.addEventListener('paste', (e) => { 
+                if (!document.getElementById('editor-modal').classList.contains('active')) return; 
+                if (e.clipboardData && e.clipboardData.items) { 
+                    for (let i = 0; i < e.clipboardData.items.length; i++) { 
+                        if (e.clipboardData.items[i].type.indexOf("image") !== -1) { 
+                            this.processImageFile(e.clipboardData.items[i].getAsFile()); 
+                            break; 
+                        } 
+                    } 
+                } 
             });
         },
 
@@ -7829,6 +8016,8 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
                 img.src = e.target.result;
                 img.style.display = 'block';
                 document.getElementById('btn-clear-img').style.display = 'inline-block';
+                // Xóa ô nhập Link để ưu tiên File
+                document.getElementById('inp-img-link').value = "";
             };
             reader.readAsDataURL(file);
         },
@@ -7839,6 +8028,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             document.getElementById('img-preview').src = "";
             document.getElementById('btn-clear-img').style.display = "none";
             document.getElementById('inp-file-hidden').value = "";
+            document.getElementById('inp-img-link').value = ""; // Clear Link
         },
 
         closeModal: function() { document.getElementById('editor-modal').classList.remove('active'); },
@@ -7868,7 +8058,11 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
 
         saveQuestion: function() {
             const qText = document.getElementById('inp-question').value.trim();
-            const qImage = document.getElementById('inp-image-data').value.trim();
+            // Lấy ảnh: Ưu tiên link nếu có, nếu không thì lấy base64
+            const qLink = document.getElementById('inp-img-link').value.trim();
+            const qBase64 = document.getElementById('inp-image-data').value.trim();
+            const qImage = qLink ? qLink : qBase64;
+
             const qMath = document.getElementById('inp-math').value.trim();
             const qCode = document.getElementById('inp-code').value.trim();
             const qLang = document.getElementById('inp-code-lang').value;
@@ -7893,7 +8087,7 @@ trống và các khối còn lại được phân bổ. Do đó, bitmap không g
             if (!qText) return alert("Vui lòng nhập nội dung!");
             if (optionsArr.length < 2) return alert("Cần ít nhất 2 đáp án!");
             if (correctIndices.length === 0) return alert("Chọn ít nhất 1 đáp án đúng!");
-            if (qType === 'single' && correctIndices.length > 1) return alert("Chế độ 'Chọn 1' chỉ được phép có 1 đáp án đúng!");
+            if (qType === 'single' && correctIndices.length > 1) return alert("Chọn 1 đáp án thì không được tick nhiều!");
 
             let finalAnswer = (qType === 'single') ? correctIndices[0] : correctIndices;
 
