@@ -1104,7 +1104,7 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 </div>
 </div>
 <div class="config-section">
-<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 242</p>
+<p id="subject-info-display" style="font-weight: bold; color: var(--primary-color); margin-bottom: 10px;">Tổng số câu hỏi: 140</p>
 <h3>Cấu hình bài thi</h3>
 <div class="time-config-row">
 <div style="display:flex; align-items:center; gap:5px;">
@@ -1151,8 +1151,8 @@ mjx-stretchy-v mjx-c, mjx-stretchy-h mjx-c {
 <div class="data-controls" style="margin-top: 10px; border-top: 2px dashed #bdc3c7; padding-top: 10px;">
 <p style="font-weight:bold; margin-bottom:5px; color: var(--secondary-color);">☁ Cloud / Google Sheet Database</p>
 <div style="margin-bottom: 8px;">
-<button class="btn btn-secondary btn-sm" onclick="DataManager.exportJSON()">⬇ Xuất file JSON (Backup)</button>
-<button class="btn btn-orange btn-sm" onclick="document.getElementById('json-upload').click()">⬆ Nạp file JSON</button>
+<button class="btn btn-secondary btn-sm" onclick="DataManager.exportJSON()">⬇ Xuất file JSON</button>
+<button class="btn btn-orange btn-sm" onclick="document.getElementById('json-upload').click()">⬆ Nhập file JSON</button>
 <input accept=".json" id="json-upload" onchange="DataManager.importJSONFile(this)" style="display: none;" type="file">
 </div>
 <div style="display:flex; gap:5px;">
@@ -8437,7 +8437,7 @@ DataManager.loadFromCloud = function() {
         });
 };
 
-// 4. Hàm xử lý trộn dữ liệu (Đồng bộ: Câu hỏi - Môn thi - Lịch sử)
+// 4. Hàm xử lý trộn dữ liệu (Đã sửa lỗi mất mật khẩu)
 DataManager.mergeData = function(data) {
     // 1. Kiểm tra định dạng sơ bộ
     if (!data.questions && !data.subjects && !data.leaderboard && !data.config) {
@@ -8447,6 +8447,10 @@ DataManager.mergeData = function(data) {
 
     // Đảm bảo GLOBAL_DATA.config luôn tồn tại
     if (!GLOBAL_DATA.config) GLOBAL_DATA.config = { subjects: ["Chung"] };
+
+    // --- [FIX QUAN TRỌNG] LƯU GIỮ MẬT KHẨU HIỆN TẠI ---
+    const currentAdminHash = GLOBAL_DATA.config.adminHash;
+    // --------------------------------------------------
 
     // 2. Hỏi người dùng chế độ nhập
     if (confirm("Bạn có muốn GHI ĐÈ dữ liệu cũ không?\n\n- OK: Xóa cũ, thay bằng mới (Reset).\n- Cancel: Giữ cũ, gộp thêm mới vào (Merge).")) {
@@ -8458,11 +8462,12 @@ DataManager.mergeData = function(data) {
             GLOBAL_DATA.leaderboard = [];
         }
         
-        // Nếu file có config thì lấy, không thì giữ nguyên mặc định để lát nữa tự quét
-        if (data.config && data.config.subjects) {
-            GLOBAL_DATA.config = data.config;
+        // Nếu file có config thì lấy danh sách môn, NHƯNG KHÔNG GHI ĐÈ PASSWORD
+        if (data.config) {
+            // Chỉ lấy subjects từ file mới
+            if(data.config.subjects) GLOBAL_DATA.config.subjects = data.config.subjects;
+            // Nếu muốn lấy các config khác thì gán ở đây, trừ adminHash
         } else {
-            // Reset lại danh sách môn nếu file mới không có config
             GLOBAL_DATA.config.subjects = ["Chung"];
         }
 
@@ -8474,11 +8479,16 @@ DataManager.mergeData = function(data) {
         if (data.leaderboard && Array.isArray(data.leaderboard)) {
             GLOBAL_DATA.leaderboard = GLOBAL_DATA.leaderboard.concat(data.leaderboard);
         }
-        // Giữ nguyên config cũ, lát nữa sẽ tự thêm môn mới vào
+        // Giữ nguyên subjects cũ, lát nữa tự quét thêm
     }
 
-    // 3. QUAN TRỌNG: Tự động quét và cập nhật danh sách môn thi từ tất cả câu hỏi hiện có
-    // Bước này giúp sửa lỗi không hiện môn thi khi file JSON thiếu mục config
+    // --- [FIX QUAN TRỌNG] KHÔI PHỤC MẬT KHẨU ---
+    if (currentAdminHash) {
+        GLOBAL_DATA.config.adminHash = currentAdminHash;
+    }
+    // ------------------------------------------
+
+    // 3. Tự động quét và cập nhật danh sách môn thi từ tất cả câu hỏi
     let subjectSet = new Set(GLOBAL_DATA.config.subjects || ["Chung"]);
     
     if (GLOBAL_DATA.questions && GLOBAL_DATA.questions.length > 0) {
@@ -8495,7 +8505,7 @@ DataManager.mergeData = function(data) {
 
     // 5. LƯU & LÀM MỚI GIAO DIỆN
     DataManager.saveToLocal();
-    Manager.updateSubjectLists(); // Cập nhật lại dropdown chọn môn
+    Manager.updateSubjectLists();
     Manager.renderList();         
     QuizApp.updateSubjectInfo();  
     
