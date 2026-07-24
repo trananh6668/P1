@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Thẻ này thông báo cho trình duyệt KHÔNG ĐƯỢC tự động đảo màu sang Dark Mode -->
+    <meta name="color-scheme" content="light only">
     <title>Ôn tập Trắc nghiệm</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
     
@@ -10,6 +12,9 @@
 
     <style>
         :root {
+            /* Ép giao diện sáng */
+            color-scheme: light; 
+            
             --primary: #007bff;
             --secondary: #6f42c1;
             --success: #28a745;
@@ -47,7 +52,7 @@
             color: #222;
         }
 
-        /* --- GIAO DIỆN UPLOAD GIỐNG HÌNH 1 --- */
+        /* --- GIAO DIỆN UPLOAD --- */
         .upload-section {
             border: 1px dashed #b5b5b5;
             padding: 35px 25px;
@@ -78,7 +83,7 @@
         }
         input[type="file"] { display: none; }
         
-        /* --- GIAO DIỆN CHỌN CHẾ ĐỘ GIỐNG HÌNH 2 --- */
+        /* --- GIAO DIỆN CHỌN CHẾ ĐỘ --- */
         #modeSelection {
             text-align: center;
             padding: 35px 20px;
@@ -309,7 +314,6 @@
             <button id="btnRandom" class="btn btn-secondary" style="margin:0;">Thi Ngẫu nhiên</button>
         </div>
         
-        <!-- Nút Review toàn bộ -->
         <div style="margin-bottom: 25px;">
             <button id="btnReviewAll" class="btn btn-outline" style="padding: 10px 20px;">Xem toàn bộ câu hỏi</button>
         </div>
@@ -320,7 +324,6 @@
         </div>
     </div>
 
-    <!-- Thanh Topbar (Live score + Nộp bài) -->
     <div id="top-bar" style="display: none;">
         <div id="scoreTracker">
             <span id="trackerAnswered">Đã làm: 0 / 0</span>
@@ -357,7 +360,6 @@
     let userAnswers = {};
     let isSubmitted = false;
 
-    // --- XỬ LÝ DỮ LIỆU TÍCH HỢP SẴN ---
     document.addEventListener("DOMContentLoaded", () => {
         if (window.PRELOADED_DATA && window.PRELOADED_DATA.length > 0) {
             document.getElementById('preloadedSection').style.display = 'block';
@@ -371,7 +373,6 @@
         document.getElementById('modeSelection').style.display = 'block';
     });
 
-    // --- ĐỌC FILE WORD ---
     document.getElementById('fileInput').addEventListener('change', function(e) {
         const file = e.target.files[0];
         if (!file) return;
@@ -390,7 +391,6 @@
         reader.readAsArrayBuffer(file);
     });
 
-    // --- PHÂN TÍCH HTML ---
     function parseDocxHTML(htmlString) {
         const parser = new DOMParser();
         const doc = parser.parseFromString(htmlString, 'text/html');
@@ -429,7 +429,6 @@
         }
     }
 
-    // --- CÁC CHẾ ĐỘ HOẠT ĐỘNG ---
     function shuffleArray(array) {
         const newArr = [...array];
         for (let i = newArr.length - 1; i > 0; i--) {
@@ -451,9 +450,8 @@
         startQuiz();
     });
 
-    // CHẾ ĐỘ XEM TOÀN BỘ CÂU HỎI
     document.getElementById('btnReviewAll').addEventListener('click', () => {
-        questions = [...rawQuestions]; // Hiện theo thứ tự gốc
+        questions = [...rawQuestions]; 
         showAllQuestionsStudyMode();
     });
 
@@ -486,7 +484,6 @@
                 optDiv.className = 'option disabled';
                 optDiv.innerText = opt;
                 
-                // Hiển thị xanh tất cả các đáp án đúng
                 if (q.correctIndexes.includes(oIdx)) {
                     optDiv.classList.add('correct');
                 }
@@ -497,7 +494,6 @@
         });
     }
 
-    // --- LƯU OFFLINE ---
     document.getElementById('btnSaveOffline').addEventListener('click', () => {
         const clone = document.documentElement.cloneNode(true);
         const dataStore = clone.querySelector('#data-store');
@@ -523,7 +519,6 @@
         document.body.removeChild(a);
     });
 
-    // --- LOGIC LÀM BÀI ---
     function startQuiz() {
         document.getElementById('modeSelection').style.display = 'none';
         document.getElementById('top-bar').style.display = 'flex'; 
@@ -621,7 +616,6 @@
         document.getElementById('jumpInput').max = questions.length;
     }
 
-    // NHẢY CÂU
     document.getElementById('jumpBtn').addEventListener('click', () => {
         const jumpInput = document.getElementById('jumpInput');
         const jumpVal = parseInt(jumpInput.value);
@@ -646,7 +640,6 @@
         if (currentIndex < questions.length - 1) { currentIndex++; renderQuestion(currentIndex); }
     });
 
-    // NỘP BÀI
     document.getElementById('btnSubmitEarly').addEventListener('click', () => {
         submitQuiz();
     });
@@ -688,7 +681,6 @@
         `;
     }
 
-    // XEM LẠI CÂU SAI
     function showReviewWrong() {
         document.getElementById('results').style.display = 'none';
         const reviewArea = document.getElementById('review-area');
