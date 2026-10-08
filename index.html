@@ -59,6 +59,20 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
 
+        /* Vùng hiển thị đang có bài dở chặn upload */
+        #activeSessionArea {
+            display: none; 
+            text-align: center; 
+            padding: 40px 20px; 
+            background: #fff3cd; 
+            border: 2px solid #ffeeba; 
+            border-radius: 8px; 
+            margin-bottom: 20px;
+        }
+        #activeSessionArea h2 {
+            color: #856404; margin-top: 0; margin-bottom: 15px; font-size: 24px;
+        }
+
         .upload-section {
             border: 2px dashed #b5b5b5;
             padding: 35px 25px;
@@ -107,6 +121,7 @@
         .btn-secondary { background-color: var(--secondary); }
         .btn-success { background-color: #2ecc71; }
         .btn-danger { background-color: var(--danger); }
+        .btn-warning { background-color: var(--warning); color: #333;}
         .btn-outline { background-color: transparent; color: var(--primary); border: 2px solid var(--primary); }
         .btn-outline:hover { background-color: #ebf5ff; }
         
@@ -180,7 +195,6 @@
         .bg-success { background: #2ecc71; }
         .loading { display: none; color: var(--primary); font-weight: bold; margin-top: 15px; }
 
-        /* Ẩn shortcut trên thiết bị di động */
         @media (max-width: 600px) {
             body { padding: 10px; }
             .container { padding: 20px 15px; }
@@ -203,6 +217,23 @@
 <div class="container">
     <h1>Ôn tập Trắc nghiệm</h1>
     
+    <!-- KHU VỰC KHÓA UPLOAD KHI CÓ BÀI DỞ -->
+    <div id="activeSessionArea" style="display: none;">
+        <h2>Phát Hiện Tiến Trình Thi Dở!</h2>
+        <p style="color: #666; font-size: 16px; margin-bottom: 25px;">
+            Hệ thống đã lưu lại bài thi trước đó của bạn.<br>
+            <b style="color: #dc3545;">(Không cho phép tải lên file Word mới khi đang có bài thi dở)</b>
+        </p>
+        <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+            <button id="btnResume" class="btn btn-primary" style="font-size: 18px; font-weight: bold; padding: 12px 40px; box-shadow: 0 4px 6px rgba(0,123,255,0.3);">▶ Tiếp Tục Thi Lại Bài Này</button>
+            <button id="btnReset" class="btn btn-danger" style="font-size: 16px; padding: 12px 25px;">🗑 Reset Tiến Trình</button>
+        </div>
+        <p style="font-size: 14px; color: #856404; margin-top: 20px; margin-bottom: 0;">
+            (Hãy bấm <b>Reset Tiến Trình</b> nếu bạn muốn tải lên bài mới hoặc thi lại từ đầu)
+        </p>
+    </div>
+
+    <!-- KHU VỰC UPLOAD FILE -->
     <div class="upload-section" id="uploadArea" style="display: block;">
         <div id="preloadedSection" style="display: none;">
             <h3>Phát hiện dữ liệu tích hợp sẵn!</h3>
@@ -221,6 +252,7 @@
         <div class="loading" id="loadingMsg" style="display: none;">Đang phân tích file Word... Quá trình có thể mất vài giây!</div>
     </div>
 
+    <!-- KHU VỰC CHỌN CHẾ ĐỘ THI -->
     <div id="modeSelection" style="display: none;">
         <div id="warningBox"></div>
 
@@ -242,6 +274,7 @@
         </div>
     </div>
 
+    <!-- KHU VỰC THI CHÍNH -->
     <div id="top-bar" style="display: none;">
         <div id="scoreTracker">
             <span id="trackerAnswered">Đã làm: 0 / 0</span>
@@ -281,10 +314,125 @@
     let isRandomMode = false;
     let keyboardFocusIndex = -1;
 
+    // ========================================================
+    // QUẢN LÝ LƯU TRỮ BẰNG INDEXEDDB (HỖ TRỢ DUNG LƯỢNG HÀNG TRĂM MB)
+    // ========================================================
+    const DB_NAME = 'QuizAppDB';
+    const DB_VERSION = 1;
+    const STORE_NAME = 'session_store';
+
+    function openDatabase() {
+        return new Promise((resolve, reject) => {
+            const req = indexedDB.open(DB_NAME, DB_VERSION);
+            req.onupgradeneeded = (e) => {
+                const db = e.target.result;
+                if (!db.objectStoreNames.contains(STORE_NAME)) {
+                    db.createObjectStore(STORE_NAME);
+                }
+            };
+            req.onsuccess = (e) => resolve(e.target.result);
+            req.onerror = (e) => reject(e.target.error);
+        });
+    }
+
+    async function saveProgress() {
+        try {
+            const db = await openDatabase();
+            const tx = db.transaction(STORE_NAME, 'readwrite');
+            const store = tx.objectStore(STORE_NAME);
+            const state = {
+                questions,
+                userAnswers,
+                currentIndex,
+                isRandomMode,
+                isSubmitted
+            };
+            store.put(state, 'current_quiz');
+        } catch (e) {
+            console.error("Lỗi khi ghi vào IndexedDB:", e);
+        }
+    }
+
+    async function loadProgress() {
+        try {
+            const db = await openDatabase();
+            return new Promise((resolve) => {
+                const tx = db.transaction(STORE_NAME, 'readonly');
+                const store = tx.objectStore(STORE_NAME);
+                const req = store.get('current_quiz');
+                req.onsuccess = () => resolve(req.result || null);
+                req.onerror = () => resolve(null);
+            });
+        } catch (e) {
+            console.error("Lỗi khi đọc từ IndexedDB:", e);
+            return null;
+        }
+    }
+
+    async function clearProgress() {
+        try {
+            const db = await openDatabase();
+            const tx = db.transaction(STORE_NAME, 'readwrite');
+            const store = tx.objectStore(STORE_NAME);
+            store.delete('current_quiz');
+        } catch (e) {
+            console.error("Lỗi khi xóa dữ liệu IndexedDB:", e);
+        }
+    }
+    // ========================================================
+
     document.addEventListener("DOMContentLoaded", () => {
+        initStartup();
+    });
+
+    async function initStartup() {
+        const savedState = await loadProgress();
+        
+        if (savedState && savedState.questions && savedState.questions.length > 0) {
+            document.getElementById('activeSessionArea').style.display = 'block';
+            document.getElementById('uploadArea').style.display = 'none';
+            document.getElementById('modeSelection').style.display = 'none';
+        } else {
+            document.getElementById('activeSessionArea').style.display = 'none';
+            document.getElementById('uploadArea').style.display = 'block';
+            checkPreloadedData();
+        }
+    }
+
+    function checkPreloadedData() {
         if (window.PRELOADED_DATA && window.PRELOADED_DATA.length > 0) {
             document.getElementById('preloadedSection').style.display = 'block';
             document.getElementById('preloadedCount').textContent = window.PRELOADED_DATA.length;
+        }
+    }
+
+    document.getElementById('btnResume').addEventListener('click', async () => {
+        const state = await loadProgress();
+        if (state) {
+            questions = state.questions;
+            userAnswers = state.userAnswers;
+            currentIndex = state.currentIndex;
+            isRandomMode = state.isRandomMode;
+            isSubmitted = state.isSubmitted;
+
+            document.getElementById('activeSessionArea').style.display = 'none';
+
+            if (isSubmitted) {
+                submitQuiz(true);
+            } else {
+                document.getElementById('top-bar').style.display = 'flex';
+                document.getElementById('controls').style.display = 'flex';
+                document.getElementById('jumpBox').style.display = isRandomMode ? 'none' : 'flex';
+                updateLiveScore();
+                renderQuestion(currentIndex);
+            }
+        }
+    });
+
+    document.getElementById('btnReset').addEventListener('click', async () => {
+        if (confirm("Bạn có chắc chắn muốn reset toàn bộ quá trình thi?")) {
+            await clearProgress();
+            initStartup();
         }
     });
 
@@ -404,8 +552,8 @@
         let currentQ = null;
 
         function processLine(html, text, tempDiv) {
-            html = html.replace(/\\s*/g, '');
-            text = text.replace(/\\s*/g, '');
+            html = html.trim();
+            text = text.trim();
 
             if (!html && !tempDiv.querySelector('img')) return;
             if (text.match(/^CHƯƠNG\s+/i)) return; 
@@ -666,6 +814,7 @@
         const dataStore = clone.querySelector('#data-store');
         dataStore.textContent = `window.PRELOADED_DATA = ${JSON.stringify(rawQuestions)};`;
 
+        clone.querySelector('#activeSessionArea').style.display = 'none';
         clone.querySelector('#uploadArea').style.display = 'block';
         clone.querySelector('#modeSelection').style.display = 'none';
         clone.querySelector('#top-bar').style.display = 'none';
@@ -695,6 +844,9 @@
         currentIndex = 0;
         userAnswers = {};
         isSubmitted = false;
+        
+        saveProgress();
+        
         updateLiveScore();
         renderQuestion(0);
     }
@@ -800,6 +952,7 @@
                         }
                         
                         updateLiveScore();
+                        saveProgress();
                     });
                 }
             }
@@ -852,6 +1005,7 @@
                 });
 
                 updateLiveScore();
+                saveProgress();
             });
             qBlock.appendChild(confirmBtn);
         }
@@ -868,13 +1022,11 @@
     // LẮNG NGHE SỰ KIỆN TỪ BÀN PHÍM (HOTKEYS)
     // ==========================================
     document.addEventListener('keydown', (e) => {
-        // Bỏ qua khi người dùng đang nhập liệu vào ô chuyển câu
         if (e.target.tagName.toLowerCase() === 'input' && (e.target.type === 'number' || e.target.type === 'text')) return;
 
         const qArea = document.getElementById('quiz-area');
         if (!qArea || qArea.style.display === 'none' || qArea.innerHTML === '') return;
 
-        // Bấm ENTER: Nộp bài ngay
         if (e.code === 'Enter') {
             e.preventDefault();
             const submitBtn = document.getElementById('btnSubmitEarly');
@@ -884,7 +1036,6 @@
             return;
         }
 
-        // Bấm Mũi tên PHẢI: Next câu hỏi
         if (e.code === 'ArrowRight') {
             e.preventDefault(); 
             const nextBtn = document.getElementById('nextBtn');
@@ -894,7 +1045,6 @@
             return;
         }
         
-        // Bấm Mũi tên TRÁI: Back câu hỏi
         if (e.code === 'ArrowLeft') {
             e.preventDefault();
             const prevBtn = document.getElementById('prevBtn');
@@ -904,12 +1054,10 @@
             return;
         }
 
-        // Điều khiển chọn đáp án (Chỉ khả dụng khi câu hiện tại chưa được nộp/khóa)
         if (!isSubmitted && userAnswers[currentIndex] === undefined) {
             const focusableElements = Array.from(document.querySelectorAll('.question-block [data-keyboard-type="option"], .question-block [data-keyboard-type="confirm-btn"]'));
             if (focusableElements.length === 0) return;
 
-            // Bấm Mũi tên XUỐNG: Di chuyển trỏ xuống dưới
             if (e.code === 'ArrowDown') {
                 e.preventDefault(); 
                 if (keyboardFocusIndex === -1) {
@@ -919,7 +1067,6 @@
                 }
                 applyKeyboardFocus(focusableElements);
             } 
-            // Bấm Mũi tên LÊN: Di chuyển trỏ lên trên
             else if (e.code === 'ArrowUp') {
                 e.preventDefault();
                 if (keyboardFocusIndex === -1) {
@@ -929,7 +1076,6 @@
                 }
                 applyKeyboardFocus(focusableElements);
             } 
-            // Bấm SPACE: Chọn đáp án đang được trỏ tới
             else if (e.code === 'Space') {
                 e.preventDefault();
                 if (keyboardFocusIndex >= 0 && keyboardFocusIndex < focusableElements.length) {
@@ -945,6 +1091,7 @@
         if (!isNaN(jumpVal) && jumpVal >= 1 && jumpVal <= questions.length) {
             currentIndex = jumpVal - 1;
             renderQuestion(currentIndex);
+            saveProgress();
             jumpInput.value = '';
         } else {
             alert('Vui lòng nhập số câu hợp lệ từ 1 đến ' + questions.length);
@@ -956,25 +1103,37 @@
     });
 
     document.getElementById('prevBtn').addEventListener('click', () => {
-        if (currentIndex > 0) { currentIndex--; renderQuestion(currentIndex); }
+        if (currentIndex > 0) { 
+            currentIndex--; 
+            renderQuestion(currentIndex); 
+            saveProgress(); 
+        }
     });
 
     document.getElementById('nextBtn').addEventListener('click', () => {
-        if (currentIndex < questions.length - 1) { currentIndex++; renderQuestion(currentIndex); }
+        if (currentIndex < questions.length - 1) { 
+            currentIndex++; 
+            renderQuestion(currentIndex); 
+            saveProgress(); 
+        }
     });
 
     document.getElementById('btnSubmitEarly').addEventListener('click', () => {
         submitQuiz();
     });
 
-    function submitQuiz() {
+    function submitQuiz(skipConfirm = false) {
         const totalQ = questions.length;
         const answeredQ = Object.keys(userAnswers).length;
         
-        let confirmMsg = `Bạn đã làm ${answeredQ}/${totalQ} câu. Chắc chắn muốn nộp bài?`;
-        if(!confirm(confirmMsg)) return;
+        if (!skipConfirm) {
+            let confirmMsg = `Bạn đã làm ${answeredQ}/${totalQ} câu. Chắc chắn muốn nộp bài?`;
+            if(!confirm(confirmMsg)) return;
+        }
         
         isSubmitted = true;
+        saveProgress();
+        
         let score = 0;
         let missingAnswers = 0;
 
@@ -1001,7 +1160,7 @@
             <div style="font-size: 15px; color: #666; margin-bottom: 25px;">(Số câu bỏ qua chưa làm: ${missingAnswers})</div>
             
             <div style="display:flex; justify-content:center; gap: 15px; flex-wrap: wrap;">
-                <button onclick="location.reload()" class="btn btn-primary" style="margin:0;">Thi Lại Lần Nữa</button>
+                <button onclick="clearProgress().then(() => location.reload())" class="btn btn-primary" style="margin:0;">Thi Lại Lần Nữa</button>
                 <button onclick="showReviewWrong()" class="btn btn-danger" style="margin:0;">Xem Các Câu Làm Sai</button>
             </div>
         `;
